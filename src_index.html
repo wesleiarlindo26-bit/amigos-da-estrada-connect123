@@ -1,0 +1,960 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="author" content="Weslei Arlindo (É o Magnata)">
+<meta name="copyright" content="Weslei Arlindo (É o Magnata)">
+<title>Amigos da Estrada Connect — BUILD FINAL DE LANÇAMENTO — DADOS REAIS</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#020812">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Arial,Helvetica,sans-serif;background:#020812;color:#f2fbff;min-height:100vh;background-image:linear-gradient(rgba(0,145,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(0,145,255,.055) 1px,transparent 1px),radial-gradient(circle at 15% 30%,rgba(0,220,255,.20),transparent 30%);background-size:72px 72px,72px 72px,100% 100%}.wrap{width:min(100% - 42px,1480px);margin:auto}.hidden{display:none!important}header{position:sticky;top:0;z-index:20;background:rgba(1,7,18,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(39,187,255,.26)}.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0}.brand{display:flex;align-items:center;gap:12px;text-transform:uppercase;font-weight:950;letter-spacing:1px}.brand img{width:74px;height:58px;object-fit:contain;filter:drop-shadow(0 0 13px #13d7ff)}.brand span{font-size:clamp(20px,2.2vw,30px);line-height:.98}.menu{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}.menu a,.menu button{color:#f3fbff;text-decoration:none;font-weight:900;font-size:14px;padding:12px 18px;border-radius:10px;border:1px solid rgba(43,178,255,.5);background:rgba(3,17,40,.78);box-shadow:inset 0 0 16px rgba(0,122,255,.11);transition:.18s;cursor:pointer}.menu a:hover,.menu button:hover,.menu a.active{background:linear-gradient(180deg,rgba(0,139,255,.58),rgba(8,32,64,.9));box-shadow:0 0 18px rgba(0,190,255,.55)}.portal{min-height:100vh;display:grid;place-items:center;padding:34px 0;background:radial-gradient(circle at 50% 45%,rgba(0,97,255,.24),transparent 35%),linear-gradient(90deg,#020812,#06172b,#020812)}.atlasBox{width:min(100% - 36px,1320px);display:grid;grid-template-columns:.92fr 1fr;gap:24px;align-items:center;border:1px solid rgba(34,196,255,.38);background:rgba(1,10,28,.86);border-radius:22px;padding:22px;box-shadow:0 0 45px rgba(0,193,255,.16)}.atlasArt{min-height:610px;border-radius:18px;background:url('assets/atlas_central.png') center/cover no-repeat;border:1px solid rgba(65,214,255,.35);box-shadow:inset 0 0 60px rgba(0,0,0,.45),0 0 35px rgba(0,183,255,.18);position:relative;overflow:hidden}.atlasArt:after{content:"";position:absolute;left:8%;right:8%;bottom:42px;height:20px;background:repeating-linear-gradient(90deg,#00d8ff 0 2px,transparent 2px 10px);filter:drop-shadow(0 0 8px #00d8ff);opacity:.85;animation:wave 1.2s linear infinite}@keyframes wave{0%{transform:scaleY(.45)}50%{transform:scaleY(1.15)}100%{transform:scaleY(.45)}}.portal h1{font-size:clamp(36px,4.5vw,68px);line-height:.96;text-transform:uppercase}.blue{color:#22d9ff}.welcome{margin:18px 0;padding:16px;border-left:4px solid #22d9ff;background:rgba(5,36,65,.78);border-radius:10px;line-height:1.35}.portalActions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}.bigBtn{border:0;border-radius:12px;padding:15px 18px;color:#fff;font-weight:950;font-size:16px;cursor:pointer;background:linear-gradient(90deg,#0b88ff,#23d9ff)}.greenBtn{background:linear-gradient(90deg,#00a443,#14df73)}.visitor{grid-column:1/-1;background:#263346}.voiceNotice{display:none;padding:12px;border-radius:10px;background:rgba(255,197,63,.14);border:1px solid rgba(255,197,63,.45);color:#ffe199;font-weight:800;margin-top:10px}.voiceNotice.show{display:block}.rules{display:grid;grid-template-columns:1fr 1fr;gap:12px}.rule{border:1px solid rgba(55,190,244,.25);border-radius:10px;padding:14px;background:rgba(0,17,40,.66);line-height:1.75}.hero{position:relative;overflow:hidden;border-bottom:1px solid rgba(31,167,230,.22)}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,8,20,.28),rgba(1,9,24,.78)),url('assets/comboio_5.png') center/cover no-repeat;opacity:.48}.heroInner{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center;padding:42px 0}.title{font-size:clamp(38px,4.2vw,58px);line-height:1;text-transform:uppercase;font-weight:950}.sub{margin-top:14px;font-size:clamp(17px,1.55vw,22px);max-width:780px;color:#dff7ff;line-height:1.35}.sub b{color:#28ddff}.sub .gold{color:#ffd46d}.heroLogo{text-align:center}.heroLogo img{width:min(500px,92%);filter:drop-shadow(0 0 30px rgba(0,213,255,.58))}.tagRow{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.tag{display:inline-flex;gap:7px;align-items:center;padding:11px 19px;border-radius:12px;border:1px solid rgba(63,203,255,.45);background:rgba(2,19,45,.82);color:#fff;text-decoration:none;font-weight:950}.memberPanel{margin-top:20px;border:1px solid rgba(57,190,244,.35);border-radius:12px;background:rgba(2,20,44,.8);padding:16px;display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center}.sectionTitle{font-size:clamp(22px,2vw,28px);color:#15d8ff;text-transform:uppercase;font-weight:950;margin:24px 0 11px}.socialGrid{display:grid;grid-template-columns:repeat(5,minmax(210px,1fr));gap:12px}.socialCard{display:grid;grid-template-columns:58px 1fr;gap:12px;align-items:center;min-height:112px;padding:14px;border-radius:12px;border:1px solid rgba(60,194,255,.35);background:linear-gradient(90deg,rgba(10,34,55,.91),rgba(5,15,34,.91));text-decoration:none;color:#f8fcff;overflow:hidden}.iconBox{width:54px;height:54px;border-radius:12px;display:grid;place-items:center;font-size:31px}.wa .iconBox{background:linear-gradient(135deg,#00f16d,#0ebc55)}.dc .iconBox{background:linear-gradient(135deg,#7b8cff,#305bd8)}.yt .iconBox{background:linear-gradient(135deg,#ff1717,#a40e0e)}.socialCard h3{font-size:19px;line-height:1.1;margin-bottom:7px}.socialCard p{font-size:13px;color:#eefbff;line-height:1.28}.btnMini{display:inline-block;margin-top:9px;border-radius:16px;padding:7px 18px;font-size:13px;font-weight:950;background:rgba(18,201,92,.86);min-width:140px;text-align:center}.yt .btnMini{background:rgba(189,38,38,.82)}main{padding:12px 0 0}.dash{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}.panel{border-radius:11px;border:1px solid rgba(54,185,240,.34);background:rgba(3,18,40,.82);padding:14px;min-height:253px}.panel h2{font-size:20px;color:#16d9ff;text-transform:uppercase;margin-bottom:10px}.event h3{color:#22e980;font-size:25px;margin:12px 0}.event ul{list-style:none;line-height:1.9}.join{display:flex;align-items:center;justify-content:center;margin-top:12px;text-decoration:none;background:linear-gradient(90deg,#079b3e,#11d864,#08a342);color:#fff;font-weight:950;border-radius:8px;padding:14px}.mrhImg{height:130px;border-radius:12px;background:url('assets/mrh_preset.jpg') center/cover no-repeat;border:1px solid rgba(255,207,83,.35);margin-bottom:10px}.mrhBtn{display:inline-block;margin-top:12px;background:linear-gradient(90deg,#e2a400,#ffd04b);color:#201100;text-decoration:none;font-weight:950;padding:12px 18px;border-radius:9px}.atlasStatus{display:grid;grid-template-columns:84px 1fr;gap:14px;align-items:center}.bot{width:80px;height:80px;border-radius:14px;background:linear-gradient(135deg,#f6fbff,#8fa0b3);display:grid;place-items:center;font-size:48px}.online{display:inline-flex;gap:8px;padding:10px 18px;border-radius:9px;background:rgba(24,196,89,.22);color:#78ffb3;font-weight:950;font-size:20px}.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:13px;margin:10px 0 30px}.stat{display:grid;grid-template-columns:70px 1fr;align-items:center;border-radius:10px;border:1px solid rgba(54,185,240,.28);background:rgba(7,24,51,.80);padding:13px}.statIcon{font-size:38px}.stat strong{font-size:28px}.trend{display:block;color:#35f485;font-size:12px;margin-top:4px}.profileGrid{display:grid;grid-template-columns:340px 1fr;gap:14px}.driverCard,.driverStats,.formCard{border:1px solid rgba(54,185,240,.34);background:rgba(3,18,40,.82);border-radius:12px;padding:15px}.driverHead{display:flex;gap:12px;align-items:center}.driverAvatar{width:72px;height:72px;border-radius:12px;background:#0b3157 center/cover no-repeat;display:grid;place-items:center;font-size:34px}.driverName{font-size:22px;font-weight:950}.driverRank{display:inline-block;margin-top:7px;border:1px solid #ffd56d;border-radius:999px;color:#ffe18a;padding:5px 10px;font-weight:900;font-size:12px}.driverMeta span{display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.08);padding:12px 0;gap:16px}.statRows{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.statBox{border:1px solid rgba(54,185,240,.25);border-radius:10px;padding:15px;background:rgba(1,11,28,.62)}.statBox strong{font-size:28px}.downloadGrid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.downloadCard{min-height:136px;border:1px solid rgba(54,185,240,.30);background:rgba(3,18,40,.78);border-radius:12px;padding:16px;text-decoration:none;color:#f0fbff;display:flex;flex-direction:column;justify-content:space-between}.downloadCard b{color:#7bedff}.lockBadge{font-size:12px;margin-left:8px;color:#ffe28b;background:rgba(255,193,34,.12);border:1px solid rgba(255,193,34,.45);padding:4px 10px;border-radius:999px}.formGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.formGrid label{display:grid;gap:6px;font-weight:900;color:#dff7ff}.formGrid input,.formGrid textarea{width:100%;padding:12px;border-radius:10px;border:1px solid rgba(64,196,255,.35);background:#03152d;color:#fff;font-weight:700}.formGrid .full{grid-column:1/-1}.primaryBtn{border:0;border-radius:10px;padding:13px 18px;color:#fff;font-weight:950;cursor:pointer;background:linear-gradient(90deg,#0b88ff,#23d9ff)}.dangerBtn{border:1px solid rgba(255,80,80,.45);border-radius:10px;padding:10px 14px;color:#fff;background:rgba(180,20,20,.2);font-weight:900;cursor:pointer}.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:100;align-items:center;justify-content:center;padding:20px}.modal.show{display:flex}.modalBox{width:min(100%,680px);border:1px solid rgba(48,200,255,.45);background:#06152b;border-radius:16px;padding:22px}.downloadSupport{display:grid;gap:10px;margin:18px 0}.supportLink{display:block;text-decoration:none;color:#fff;background:rgba(255,0,0,.18);border:1px solid rgba(255,80,80,.35);border-radius:10px;padding:12px;font-weight:900}.modalActions{display:flex;gap:10px;flex-wrap:wrap}.ghostBtn{border:1px solid rgba(90,200,255,.4);background:rgba(255,255,255,.06);color:#fff;border-radius:10px;padding:12px 16px;font-weight:900;cursor:pointer}.green{background:rgba(19,188,94,.4)}.missionLink.done{background:rgba(19,188,94,.35);border-color:rgba(19,188,94,.75)}.adminSaveAll{background:linear-gradient(90deg,#00a443,#14df73)!important;margin-top:12px}footer{border-top:1px solid rgba(52,183,240,.28);background:rgba(1,8,21,.78);padding:14px 0}.foot{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;align-items:center;color:#e2f7ff}.footLogo{display:flex;align-items:center;gap:12px}.footLogo img{width:52px;height:42px;object-fit:contain}.center{text-align:center}.right{text-align:right}.versionBadge{display:inline-block;background:#0d3561;border:1px solid rgba(67,200,255,.28);border-radius:8px;padding:9px 22px;font-weight:900}.notice{margin-top:10px;padding:12px;border-radius:10px;background:rgba(17,255,122,.09);border:1px solid rgba(17,255,122,.25);color:#d9ffe7;font-weight:800}
+@media(max-width:1150px){.atlasBox,.heroInner,.profileGrid{grid-template-columns:1fr}.socialGrid,.stats,.downloadGrid{grid-template-columns:repeat(2,1fr)}.dash{grid-template-columns:1fr}.atlasArt{min-height:420px}.formGrid{grid-template-columns:1fr}}@media(max-width:650px){.wrap{width:min(100% - 22px,1480px)}.nav{align-items:flex-start;flex-direction:column}.socialGrid,.stats,.downloadGrid{grid-template-columns:1fr}.portalActions,.rules{grid-template-columns:1fr}.title{font-size:36px}.foot{grid-template-columns:1fr;text-align:left}.right,.center{text-align:left}.statRows{grid-template-columns:1fr}}
+
+/* ADDONS v5.2: funções novas sem mudar a Home v1.1 */
+.floatingAtlas{position:fixed;right:24px;bottom:24px;z-index:90;width:108px;height:108px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,#e9fcff 0 8%,#18dfff 9% 18%,#005dff 22%,#020812 58%);box-shadow:0 0 35px #16d9ff,0 0 80px rgba(0,122,255,.35);border:1px solid rgba(75,218,255,.8);animation:atlasPulse 2.2s infinite ease-in-out}.floatingAtlas:before{content:"";position:absolute;inset:12px;border-radius:50%;border:2px solid rgba(255,255,255,.25);border-left-color:#18e7ff;animation:spin 3s linear infinite}.floatingAtlas span{position:absolute;bottom:11px;font-size:10px;font-weight:950;letter-spacing:2px}.floatingAtlas .eye{width:46px;height:13px;border-radius:999px;background:#f6ffff;box-shadow:0 0 22px #fff}@keyframes atlasPulse{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-8px) scale(1.03)}}@keyframes spin{to{transform:rotate(360deg)}}
+.adminGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.adminBox{border:1px solid rgba(54,185,240,.34);background:rgba(3,18,40,.82);border-radius:12px;padding:15px}.adminList{display:grid;gap:8px;margin-top:10px}.adminRow{display:grid;grid-template-columns:1fr 1.4fr auto;gap:8px}.adminRow input,.adminBox input,.adminBox textarea,.adminBox select{padding:11px;border-radius:9px;border:1px solid rgba(64,196,255,.35);background:#03152d;color:#fff;font-weight:700}.installBtn{position:fixed;left:22px;bottom:22px;z-index:91;border:1px solid rgba(43,178,255,.5);border-radius:12px;padding:13px 16px;color:#fff;font-weight:950;background:linear-gradient(90deg,#0b88ff,#23d9ff);box-shadow:0 0 24px rgba(0,190,255,.35);cursor:pointer}.gameCard{transform-style:preserve-3d;transition:.22s}.gameCard:hover{transform:perspective(900px) rotateX(4deg) rotateY(-5deg) translateY(-4px);box-shadow:0 18px 35px rgba(0,0,0,.38),0 0 22px rgba(0,217,255,.28)}
+@media(max-width:850px){.adminGrid,.adminRow{grid-template-columns:1fr}.floatingAtlas{width:86px;height:86px}.installBtn{bottom:122px}}
+
+
+.bootScreen{position:fixed;inset:0;z-index:999;display:grid;place-items:center;background:linear-gradient(rgba(1,7,18,.58),rgba(1,7,18,.82)),url('assets/comboio_5.png') center/cover no-repeat;overflow:hidden}.bootScreen:before{content:"";position:absolute;inset:0;background:linear-gradient(transparent 0 96%,rgba(25,211,255,.12) 97%),linear-gradient(90deg,transparent 0 96%,rgba(25,211,255,.12) 97%);background-size:70px 70px;opacity:.33}.bootPanel{position:relative;text-align:center;display:grid;gap:18px;justify-items:center;animation:bootIn .8s ease both}.bootLogo{width:150px;filter:drop-shadow(0 0 26px #18dfff)}.bootOrb{width:210px;height:210px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,#f7ffff 0 5%,#21e8ff 6% 15%,#006bff 23%,#020812 62%);box-shadow:0 0 45px #18dfff,0 0 110px rgba(0,119,255,.65);border:2px solid rgba(100,226,255,.85);animation:atlasPulse 1.8s infinite ease-in-out;position:relative}.bootOrb:before{content:"";position:absolute;inset:18px;border-radius:50%;border:3px solid rgba(255,255,255,.25);border-left-color:#18e7ff;border-right-color:#ffd86d;animation:spin 2.6s linear infinite}.bootOrb .eye{width:78px;height:18px;border-radius:999px;background:#f6ffff;box-shadow:0 0 28px #fff}.bootTitle{font-size:clamp(28px,4vw,54px);font-weight:950;text-transform:uppercase;letter-spacing:1px;text-shadow:0 0 22px rgba(34,217,255,.7)}.bootBar{width:min(520px,80vw);height:12px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(57,214,255,.45);overflow:hidden}.bootBar span{display:block;height:100%;width:0;background:linear-gradient(90deg,#0b88ff,#23d9ff,#ffd56d);animation:loadBar 3.8s ease forwards}.bootSmall{color:#dff7ff;font-weight:900}.bootSkip{position:absolute;right:22px;bottom:22px;background:rgba(3,18,40,.75);border:1px solid rgba(57,214,255,.5);color:#fff;border-radius:12px;padding:12px 16px;font-weight:900;cursor:pointer}.loggedBox{display:none;border:1px solid rgba(57,190,244,.35);border-radius:12px;background:rgba(2,20,44,.8);padding:18px;margin-top:10px}.loggedActions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.adminTabs{display:grid;gap:14px}.adminBox input,.adminBox select,.adminBox textarea{width:100%;padding:10px;border-radius:9px;border:1px solid rgba(64,196,255,.35);background:#03152d;color:#fff;font-weight:700;margin:5px 0}.adminRow4{display:grid;grid-template-columns:1fr 1.7fr auto;gap:7px;margin:7px 0}.adminRow4 button{min-width:42px}.fileHint{font-size:12px;color:#bdefff;margin-top:4px}@keyframes loadBar{to{width:100%}}@keyframes bootIn{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:scale(1)}}
+
+/* CADASTRO LOCAL ATLAS v5.5.1 */
+.authChoiceModal{display:none;position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.78);align-items:center;justify-content:center;padding:20px}.authChoiceModal.show{display:flex}.authChoiceBox{width:min(100%,740px);border:1px solid rgba(48,200,255,.55);background:linear-gradient(135deg,rgba(2,13,35,.98),rgba(4,28,55,.95));border-radius:18px;padding:22px;box-shadow:0 0 45px rgba(0,193,255,.22)}.authTop{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}.authTop h2{color:#22d9ff;text-transform:uppercase}.authProviderGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}.authProvider{border:0;border-radius:12px;padding:14px 16px;color:#fff;font-weight:950;cursor:pointer;background:linear-gradient(90deg,#0b88ff,#23d9ff)}.authProvider.steam{background:linear-gradient(90deg,#22364f,#43a3ff)}.authForm{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.authForm label{display:grid;gap:6px;font-weight:900}.authForm input{padding:12px;border-radius:10px;border:1px solid rgba(64,196,255,.35);background:#03152d;color:#fff;font-weight:700}.authFull{grid-column:1/-1}.authMini{font-size:12px;color:#bdefff;line-height:1.5;margin-top:10px}.googleBadge{display:inline-flex;align-items:center;gap:8px;border-radius:999px;border:1px solid rgba(55,190,244,.35);padding:6px 10px;color:#dff7ff;background:rgba(3,18,40,.72);font-weight:900}.avatarGoogle{width:42px;height:42px;border-radius:50%;object-fit:cover;border:1px solid rgba(48,200,255,.55)}@media(max-width:700px){.authProviderGrid,.authForm{grid-template-columns:1fr}}
+
+/* BUILD v5.6 IMMERSION EDITION — vídeo e áudio */
+.bootVideoBg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:.72;filter:brightness(.72) saturate(1.15);pointer-events:none}.bootScreen>*{position:relative;z-index:2}.bootScreen:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at center,rgba(0,213,255,.14),transparent 38%),linear-gradient(rgba(1,7,18,.12),rgba(1,7,18,.55));z-index:1;pointer-events:none}.audioRow{display:grid;grid-template-columns:1fr 120px;gap:10px;align-items:center;margin:8px 0}.adminCheck{display:flex!important;align-items:center;gap:10px;margin:7px 0;font-weight:900;color:#dff7ff}.adminCheck input{width:auto!important;margin:0!important}.smallBtn{border:1px solid rgba(90,200,255,.4);background:rgba(255,255,255,.06);color:#fff;border-radius:10px;padding:10px 13px;font-weight:900;cursor:pointer}
+
+</style>
+</head>
+<body>
+
+<section class="bootScreen" id="bootScreen">
+  <div class="bootPanel">
+    <img class="bootLogo" src="assets/logo.png" alt="Logo Amigos da Estrada">
+    <div class="bootOrb"><div class="eye"></div></div>
+    <div class="bootTitle">Inicializando Atlas</div>
+    <div class="bootBar"><span></span></div>
+    <div class="bootSmall">Sistemas do comboio online...</div>
+  </div>
+  <button class="bootSkip" id="bootSkip" type="button">Entrar agora</button>
+</section>
+<section class="portal hidden" id="portal">
+  <div class="atlasBox">
+    <div class="atlasArt" aria-label="Atlas Assistente"></div>
+    <div>
+      <h1>AMIGOS DA ESTRADA <span class="blue">CONNECT</span></h1>
+      <div class="welcome"><b>Seja bem-vindo ao Amigos da Estrada.</b><br>Sou Atlas, assistente oficial da comunidade. Faça seu cadastro para entrar na empresa, participar dos comboios e liberar os recursos exclusivos.</div>
+      <p style="font-size:20px;line-height:1.5">🚛 Comboio todos os dias às <b>18h</b> • 🎥 Live todos os dias às <b>18h</b> • 💎 Presets MRH para membros.</p>
+      <div class="portalActions">
+        <button class="bigBtn greenBtn" id="goRegisterBtn">🚛 Entrar para a Empresa</button>
+        <button class="bigBtn" id="goLoginBtn">🔐 Já sou membro</button>
+        <button class="bigBtn visitor" id="visitorBtn">Entrar como Visitante</button>
+      </div>
+      <div class="voiceNotice" id="voiceNotice">🔊 Clique em qualquer lugar para ativar a voz do Atlas</div>
+      <div class="rules"><div class="rule"><b>Visitante</b><br>✅ Ver portal<br>✅ Ver comunidade<br>❌ Downloads bloqueados</div><div class="rule"><b>Membro cadastrado</b><br>✅ Perfil do motorista<br>✅ Downloads liberados<br>✅ Estatísticas reais locais</div></div>
+    </div>
+  </div>
+</section>
+<header id="siteHeader" class="hidden"><div class="wrap nav"><div class="brand"><img src="assets/logo.png"><span>AMIGOS DA<br>ESTRADA<br>CONNECT</span></div><nav class="menu"><a href="#home" class="active">🔷 Home</a><a href="#cadastro">🚛 Cadastro</a><a href="#comboio">🚚 Comboios</a><a href="#comunidade">👥 Comunidade</a><a href="#perfil">👤 Meu Perfil</a><a href="#downloads">⬇️ Downloads</a><a href="#mrh">💎 MRH</a><a href="#carteira">🪪 Carteira</a><a href="#ranks">🏆 Ranks</a><a href="#brindes">🎁 Brindes</a><a href="#admin">⚙️ Admin</a><button id="logoutBtn">Sair</button></nav></div></header>
+<section class="hero hidden" id="home"><div class="wrap heroInner"><div><h1 class="title">AMIGOS DA ESTRADA <span class="blue">CONNECT</span></h1><p class="sub">Portal oficial do comboio para baixar <b>arquivos, mods, mapas</b>, acessar <span class="gold">presets MRH</span> e participar da comunidade Euro Truck Simulator 2.</p><div class="tagRow"><a class="tag" href="#cadastro">🚛 Entrar para a Empresa</a><a class="tag" href="#comboio">🚚 Comboios</a><a class="tag" href="#comunidade">👥 Comunidade</a><a class="tag" href="#downloads">⬇️ Downloads</a><a class="tag" href="#mrh">💎 MRH</a></div><div class="memberPanel"><div><h3 id="loginStatusTitle">Sistema de Cadastro Amigos da Estrada</h3><p id="loginStatus">Cadastre-se para liberar downloads e criar seu perfil de motorista.</p></div><button class="bigBtn" id="heroRegisterBtn">Entrar para a Empresa</button></div></div><div class="heroLogo"><img src="assets/logo.png" alt="Logo Amigos da Estrada"></div></div></section>
+<section class="wrap hidden" id="comunidade"><h2 class="sectionTitle">Entre na Comunidade</h2><div class="socialGrid"><a class="socialCard wa" href="https://chat.whatsapp.com/FVsXXYbhXUyDdSC5A8SOzH" target="_blank"><div class="iconBox">☘</div><div><h3>WhatsApp Oficial</h3><p>Grupo oficial da comunidade.</p><span class="btnMini">Entrar no Grupo</span></div></a><a class="socialCard dc" href="https://discord.gg/GZPtZvfZ" target="_blank"><div class="iconBox">☯</div><div><h3>Discord Oficial</h3><p>Servidor oficial para comboios, voz e avisos.</p><span class="btnMini">Entrar no Servidor</span></div></a><a class="socialCard yt" href="https://www.youtube.com/@JenMasterGamers" target="_blank"><div class="iconBox">▶</div><div><h3>JenMaster Gamers</h3><p>Canal parceiro da comunidade.</p><span class="btnMini">Visitar Canal</span></div></a><a class="socialCard yt" href="https://www.youtube.com/@SQS%C3%89oMaGnaTa" target="_blank"><div class="iconBox">▶</div><div><h3>É o MaGnaTa</h3><p>Canal oficial do MaGnaTa.</p><span class="btnMini">Visitar Canal</span></div></a><a class="socialCard yt" href="https://youtube.com/@roger46oficial?si=hI2EmnFGovAPy_tp" target="_blank"><div class="iconBox">▶</div><div><h3>Roger46 Oficial</h3><p>Canal parceiro da comunidade.</p><span class="btnMini">Visitar Canal</span></div></a></div></section>
+<main class="wrap hidden" id="portalMain">
+<section id="cadastro"><h2 class="sectionTitle">🚛 Cadastro Amigos da Estrada</h2><div class="formCard"><form id="memberForm" class="formGrid"><label>Nome do motorista<input required name="nome" placeholder="Ex: MaGnaTa"></label><label>Nick ETS2<input required name="nick" placeholder="Seu nick no ETS2"></label><label>E-mail<input required type="email" name="email" placeholder="seuemail@email.com"></label><label>Senha<input required type="password" name="senha" minlength="4" placeholder="Crie uma senha"></label><label>Cidade / Estado<input name="cidade" placeholder="Ex: São Paulo / SP"></label><label>Discord opcional<input name="discord" placeholder="Ex: magnata#0000"></label><label class="full">Canal YouTube opcional<input name="youtube" placeholder="Link do seu canal"></label><button class="primaryBtn full" type="submit">🚛 Entrar para a Empresa</button></form><div id="cadastroNotice" class="notice hidden"></div><form id="loginForm" class="formGrid" style="margin-top:16px"><label>E-mail de membro<input type="email" name="emailLogin" placeholder="E-mail cadastrado"></label><label>Senha<input type="password" name="senhaLogin" placeholder="Senha"></label><button class="primaryBtn" type="submit">🔐 Entrar na Estrada</button><button type="button" class="dangerBtn" id="limparDadosBtn">Limpar dados locais</button></form><div id="loggedMemberBox" class="loggedBox"><h3 id="loggedWelcome">Bem-vindo de volta, motorista.</h3><p>Conta ativa no Amigos da Estrada Connect.</p><div class="loggedActions"><a class="tag" href="#perfil">👤 Meu Perfil</a><a class="tag" href="#carteira">🪪 Carteira</a><a class="tag" href="#downloads">⬇️ Downloads</a><button class="dangerBtn" id="loggedLogout" type="button">Sair</button></div></div></div></section>
+<section class="dash"><div class="panel event" id="comboio"><h2>🚛 Comboio Oficial Todos os Dias</h2><h3>Todos os dias a partir das 18h</h3><ul><li>🎥 Live oficial da comunidade às 18h</li><li>🎮 Aberto para motoristas ETS2</li><li>💬 Participação pelo Discord</li><li>🛣️ Rotas combinadas pela comunidade</li></ul><a class="join" href="https://discord.gg/GZPtZvfZ" target="_blank">🚛 Quero Participar</a></div><div class="panel" id="mrh"><h2>💎 Parceiro Oficial</h2><div class="mrhImg"></div><h3>MRH Graphics Collection</h3><p>Presets ReShade oficiais da Magnata Real Horizon para ETS2.</p><a class="mrhBtn protectedDownload" data-file="MRH ReShade" href="https://modsfire.com/9AnblRt9DH9EI3J" target="_blank">📥 Baixar Presets MRH</a></div><div class="panel"><h2>🤖 Atlas ETS2 Assistant</h2><div class="atlasStatus"><div class="bot">🤖</div><div><div class="online">● ONLINE</div><p>Versão: Build Real v1.1</p></div></div><p style="margin-top:14px;line-height:1.7">✅ Cadastro próprio<br>✅ Voz de boas-vindas<br>✅ Downloads para membros<br>✅ Perfil do motorista</p></div></section>
+<section><h2 class="sectionTitle">Estatísticas da Comunidade <span class="lockBadge">dados reais locais</span></h2><div class="stats"><div class="stat"><div class="statIcon">👥</div><div><strong id="membersCount">0</strong><span>Membros cadastrados</span><span class="trend">Cadastro real no navegador</span></div></div><div class="stat"><div class="statIcon">🚚</div><div><strong id="comboiosCount">1</strong><span>Comboios oficiais</span><span class="trend">Diário às 18h</span></div></div><div class="stat"><div class="statIcon">⬇️</div><div><strong id="downloadCounter">0</strong><span>Downloads efetuados</span><span class="trend">Somente membros</span></div></div><div class="stat"><div class="statIcon">▶️</div><div><strong>3</strong><span>Canais Parceiros</span><span class="trend">Ativo</span></div></div><div class="stat"><div class="statIcon">🌐</div><div><strong id="cityCount">0</strong><span>Cidades cadastradas</span><span class="trend">Pelo cadastro</span></div></div></div></section>
+<section id="perfil"><h2 class="sectionTitle">👤 Perfil do Motorista</h2><div class="profileGrid"><div class="driverCard"><div class="driverHead"><div class="driverAvatar" id="driverAvatar">🚛</div><div><div class="driverName" id="driverName">Visitante</div><div class="driverRank" id="driverRank">🔒 Sem cadastro</div></div></div><div class="driverMeta"><span><b>Status</b><small id="driverStatus">Aguardando cadastro</small></span><span><b>Nick ETS2</b><small id="driverNick">---</small></span><span><b>Cidade/Estado</b><small id="driverCity">---</small></span><span><b>Discord</b><small id="driverDiscord">---</small></span><span><b>YouTube</b><small id="driverYoutube">---</small></span></div></div><div class="driverStats"><h3>Estatísticas do Motorista Amigos da Estrada</h3><div class="statRows"><div class="statBox"><strong id="profileDownloads">0</strong><span>Downloads</span></div><div class="statBox"><strong id="profileComboios">0</strong><span>Comboios participados</span></div><div class="statBox"><strong id="profilePrints">0</strong><span>Prints enviadas</span></div><div class="statBox"><strong id="profileLive">0</strong><span>Lives acompanhadas</span></div><div class="statBox"><strong id="profileSince">---</strong><span>Membro desde</span></div><div class="statBox"><strong id="profileLevel">Novato</strong><span>Nível</span></div></div></div></div></section>
+<section id="downloads"><h2 class="sectionTitle">Downloads do Comboio <span class="lockBadge">🔒 cadastro obrigatório</span></h2><div class="downloadGrid"><a class="downloadCard protectedDownload" data-file="PNG" href="#"><h3>🖼️ PNG</h3><p>Pacote de imagens e arquivos visuais do comboio.</p><b>Baixar PNG</b></a><a class="downloadCard protectedDownload" data-file="Mods Comboio" href="#"><h3>📦 Mods Comboio</h3><p>Pacote principal com os mods usados nos comboios.</p><b>Baixar Mods</b></a><a class="downloadCard protectedDownload" data-file="Mapa EAA" href="#"><h3>🗺️ Mapa EAA</h3><p>Mapa EAA para rotas do Brasil e América.</p><b>Baixar Mapa</b></a><a class="downloadCard" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3730350601" target="_blank"><h3>🎮 Workshop Steam</h3><p>Item oficial do Steam Workshop.</p><b>Abrir Workshop</b></a><a class="downloadCard protectedDownload" data-file="MRH ReShade" href="https://modsfire.com/9AnblRt9DH9EI3J" target="_blank"><h3>💎 MRH ReShade</h3><p>Presets MRH protegidos para membros.</p><b>Baixar MRH</b></a></div></section>
+<section id="carteira"><h2 class="sectionTitle">🪪 Carteira do Motorista</h2><div class="profileGrid"><div class="driverCard"><h3>Carteira Amigos da Estrada</h3><p style="line-height:1.8;margin-top:10px">Documento digital do motorista cadastrado no comboio.</p><div class="driverMeta"><span><b>Nome</b><small id="cardNome">Visitante</small></span><span><b>Categoria</b><small>ETS2</small></span><span><b>Permissão</b><small id="cardPermissao">Visitante</small></span><span><b>Status</b><small id="cardStatus">Aguardando cadastro</small></span></div></div><div class="driverStats"><h3>Progresso</h3><div class="statRows"><div class="statBox"><strong id="cardXP">0</strong><span>XP</span></div><div class="statBox"><strong id="cardNivel">Novato</strong><span>Nível</span></div><div class="statBox"><strong id="cardConquista">0</strong><span>Conquistas</span></div></div></div></div></section>
+<section id="ranks"><h2 class="sectionTitle">🏆 Ranks Amigos da Estrada</h2><div class="downloadGrid" id="rankCards"><div class="downloadCard"><h3>🥉 Bronze</h3><p>Motorista iniciante.</p><b>0 a 4 comboios</b></div><div class="downloadCard"><h3>🥈 Prata</h3><p>Estradeiro ativo.</p><b>5 a 19 comboios</b></div><div class="downloadCard"><h3>🥇 Ouro</h3><p>Veterano do comboio.</p><b>20+ comboios</b></div><div class="downloadCard"><h3>💎 Diamante</h3><p>Destaque da comunidade.</p><b>Admin define</b></div><div class="downloadCard"><h3>👑 Líder</h3><p>Equipe Amigos da Estrada.</p><b>Admin</b></div></div></section>
+<section id="brindes"><h2 class="sectionTitle">🎁 Brindes e Recompensas</h2><div class="downloadGrid" id="brindeGrid"></div></section>
+<section id="admin"><h2 class="sectionTitle">⚙️ Painel Administrador</h2><div class="formCard"><p style="line-height:1.7">Painel protegido. Altere links, downloads, fundos, logo, brindes e Atlas sem mexer no código.</p><div style="margin:12px 0;display:flex;gap:10px;flex-wrap:wrap"><input id="adminPass53" type="password" placeholder="Digite a senha admin" style="padding:12px;border-radius:10px;border:1px solid rgba(64,196,255,.35);background:#03152d;color:#fff"><button class="primaryBtn" id="unlockAdmin53" type="button">Entrar no Painel Admin</button></div><div id="adminArea53" class="hidden adminTabs"><div class="adminBox"><h3>🎨 Visual do site</h3><label>Fundo da tela Xbox/carregamento<input type="file" id="bgBootFile" accept="image/*,video/mp4,video/webm"></label><label>Imagem da tela Atlas v1.1<input type="file" id="bgAtlasFile" accept="image/*"></label><label>Fundo da Home<input type="file" id="bgHomeFile" accept="image/*"></label><label>Ícone/logo do comboio<input type="file" id="logoFile" accept="image/*"></label><p class="fileHint">Agora esta opção aceita imagem ou vídeo MP4/WebM para a tela Xbox/carregamento.</p></div><div class="adminBox"><h3>🔊 Áudio e Imersão</h3><label class="adminCheck"><input type="checkbox" id="audioHoverOn" checked> Som ao passar o mouse nos botões</label><label class="adminCheck"><input type="checkbox" id="audioClickOn" checked> Som ao clicar nos botões</label><label class="adminCheck"><input type="checkbox" id="audioStartupOn" checked> Som de carregamento Atlas</label><div class="audioRow"><label>Volume geral<input type="range" id="audioVolume" min="0" max="100" value="35"></label><button class="smallBtn" type="button" id="testAudioBtn">▶ Testar</button></div><label>Som de carregamento personalizado (.mp3/.wav)<input type="file" id="startupAudioFile" accept="audio/*"></label><p class="fileHint">O som padrão é original, estilo sistema iniciando. O navegador só toca áudio depois do primeiro clique do usuário.</p></div><div class="adminBox"><h3>🔗 Links fixos editáveis</h3><div id="adminFixedLinks"></div><button class="primaryBtn" id="saveFixedLinks" type="button">Salvar links fixos</button><h3 style="margin-top:14px">➕ Adicionar link principal</h3><input id="extraLinkName" placeholder="Nome do link"><input id="extraLinkUrl" placeholder="URL"><button class="primaryBtn" id="addExtraLink" type="button">Adicionar Link</button><div id="adminExtraLinks"></div></div><div class="adminBox"><h3>📥 5 Downloads fixos editáveis</h3><div id="adminFixedDownloads"></div><button class="primaryBtn" id="saveFixedDownloads" type="button">Salvar downloads fixos</button><h3 style="margin-top:14px">➕ Adicionar download</h3><input id="extraDownloadName" placeholder="Nome do download"><input id="extraDownloadUrl" placeholder="URL"><button class="primaryBtn" id="addExtraDownload" type="button">Adicionar Download</button><div id="adminExtraDownloads"></div></div><div class="adminBox"><h3>🎁 Brindes</h3><input id="newGiftTitle" placeholder="Nome do brinde"><input id="newGiftUrl" placeholder="Link do brinde"><button class="primaryBtn" id="addGift53" type="button">Adicionar Brinde</button><div id="adminGifts"></div></div><div class="adminBox"><h3>🤖 Atlas</h3><select id="voiceMode53"><option value="futurista">Robô futurista</option><option value="humana">Masculina humana</option><option value="infantil">Robô infantil</option></select><textarea id="atlasPhrase53" rows="3">Olá, motorista. Sistemas do comboio online.</textarea><button class="primaryBtn" id="saveAtlas53" type="button">Salvar Atlas</button></div><div class="adminBox"><h3>📲 PWA / App</h3><button class="primaryBtn" id="installApp2" type="button">📲 Instalar Amigos da Estrada</button><p style="margin-top:10px">No site publicado em HTTPS, o Chrome mostra a instalação como aplicativo.</p></div><button class="primaryBtn adminSaveAll" id="saveAllAdmin53" type="button">💾 Salvar Alterações e Fechar Painel</button></div></div></section>
+
+</main>
+<div class="floatingAtlas hidden" id="floatingAtlas"><div class="eye"></div><span>ATLAS</span></div><button class="installBtn hidden" id="installApp">📲 Instalar App</button>
+<div class="modal" id="downloadModal"><div class="modalBox"><h2>🤖 Atlas — Apoie a Comunidade</h2><p><b>Atlas:</b> Motorista, os downloads estão liberados. Antes de sair, ajude o Amigos da Estrada a crescer: conheça os canais parceiros e entre nos grupos oficiais.</p><div class="downloadSupport"><a class="supportLink missionLink" target="_blank" href="https://www.youtube.com/@JenMasterGamers">▶️ Apoiar JenMaster Gamers</a><a class="supportLink missionLink" target="_blank" href="https://www.youtube.com/@SQS%C3%89oMaGnaTa">▶️ Apoiar É o MaGnaTa</a><a class="supportLink missionLink" target="_blank" href="https://youtube.com/@roger46oficial?si=hI2EmnFGovAPy_tp">▶️ Apoiar Roger46 Oficial</a><a class="supportLink missionLink" target="_blank" href="https://chat.whatsapp.com/FVsXXYbhXUyDdSC5A8SOzH">💬 Entrar no WhatsApp Oficial</a><a class="supportLink missionLink" target="_blank" href="https://discord.gg/GZPtZvfZ">🎧 Entrar no Discord Oficial</a></div><div class="notice" id="missionNotice">Obrigado por fortalecer nossa comunidade. Os downloads continuam liberados.</div><div class="modalActions"><button class="ghostBtn" id="closeModal">Fechar</button></div></div></div>
+
+<div class="authChoiceModal" id="authChoiceModal">
+  <div class="authChoiceBox">
+    <div class="authTop"><h2>Cadastro Atlas</h2><button class="ghostBtn" id="authCloseBtn" type="button">Fechar</button></div>
+    <p id="authStatus" class="notice">Cadastro local ativo. Seus dados ficam salvos neste navegador para entrar no portal Amigos da Estrada.</p>
+
+    <form id="localAtlasForm" class="authForm">
+      <label>Nome do motorista<input name="nome" id="localNome" placeholder="Ex: MaGnaTa" required></label>
+      <label>Nick ETS2<input name="nick" id="localNick" placeholder="Seu nick no ETS2" required></label>
+      <label>E-mail<input name="email" id="localEmail" type="email" placeholder="seuemail@email.com" required></label>
+      <label>Senha<input name="senha" id="localSenha" type="password" placeholder="Crie uma senha" required></label>
+      <label>Cidade / Estado<input name="cidade" id="localCidade" placeholder="Ex: Rio de Janeiro / RJ"></label>
+      <label>Discord opcional<input name="discord" id="localDiscord" placeholder="Ex: link do Discord ou seu usuário"></label>
+      <label class="authFull">Canal YouTube opcional<input name="youtube" id="localYoutube" placeholder="Link do seu canal"></label>
+      <button class="primaryBtn authFull" id="localFinalizeBtn" type="submit">🚛 Finalizar cadastro e entrar no portal</button>
+    </form>
+
+    <div class="authDivider" style="height:1px;background:rgba(64,196,255,.25);margin:16px 0"></div>
+
+    <form id="localLoginForm" class="authForm">
+      <label>E-mail cadastrado<input id="loginLocalEmail" type="email" placeholder="E-mail cadastrado"></label>
+      <label>Senha<input id="loginLocalSenha" type="password" placeholder="Senha"></label>
+      <button class="primaryBtn authFull" type="submit">🔐 Entrar com cadastro local</button>
+    </form>
+
+    <p class="authMini">Cadastro 100% local: não precisa Google, Firebase ou variáveis na Vercel. Os dados ficam salvos no navegador da pessoa.</p>
+  </div>
+</div>
+
+<footer id="siteFooter" class="hidden"><div class="wrap foot"><div class="footLogo"><img src="assets/logo.png"><div><b>AMIGOS DA ESTRADA CONNECT</b><br><small>Portal Oficial da Comunidade ETS2</small></div></div><div class="center"><small>© 2026 Amigos da Estrada Connect — Criado e idealizado por Weslei Arlindo (É o Magnata). Todos os direitos reservados.</small></div><div class="right"><span class="versionBadge">BUILD FINAL LANÇAMENTO</span></div></div></footer>
+<script>
+const $=s=>document.querySelector(s); const $$=s=>document.querySelectorAll(s);
+const DBKEY='aec_members_v11'; const SESSION='aec_current_member_v11'; const DLS='aec_downloads_v11';
+function getMembers(){return JSON.parse(localStorage.getItem(DBKEY)||'[]')}function setMembers(v){localStorage.setItem(DBKEY,JSON.stringify(v))}function current(){return JSON.parse(localStorage.getItem(SESSION)||'null')}function setCurrent(m){localStorage.setItem(SESSION,JSON.stringify(m))}function downloads(){return JSON.parse(localStorage.getItem(DLS)||'[]')}function setDownloads(v){localStorage.setItem(DLS,JSON.stringify(v))}
+function showSite(){ $('#portal').classList.add('hidden'); $('#siteHeader').classList.remove('hidden'); $('#home').classList.remove('hidden'); $('#comunidade').classList.remove('hidden'); $('#portalMain').classList.remove('hidden'); $('#siteFooter').classList.remove('hidden'); render(); }
+function speakAtlas(text, fromClick=false){ if(!('speechSynthesis' in window)){return} const u=new SpeechSynthesisUtterance(text); u.lang='pt-BR'; u.rate=.94; u.pitch=.82; try{speechSynthesis.cancel(); speechSynthesis.speak(u)}catch(e){ if(!fromClick) $('#voiceNotice').classList.add('show'); } }
+const intro='Olá, seja bem-vindo ao Amigos da Estrada Connect. Eu sou Atlas, assistente oficial da comunidade. Faça seu cadastro para entrar na empresa, participar dos comboios e liberar os recursos exclusivos.'; setTimeout(()=>speakAtlas(intro),500); document.body.addEventListener('click',()=>{$('#voiceNotice')?.classList.remove('show')},{once:true});
+$('#visitorBtn').onclick=()=>{ showSite(); speakAtlas('Entrada como visitante liberada. Para baixar os arquivos, faça o cadastro no Amigos da Estrada.',true); };
+$('#goRegisterBtn').onclick=()=>{ showSite(); setTimeout(()=>location.hash='cadastro',50); };
+$('#goLoginBtn').onclick=()=>{ showSite(); setTimeout(()=>location.hash='cadastro',50); };
+$('#heroRegisterBtn').onclick=()=>{ location.hash='cadastro'; };
+$('#logoutBtn').onclick=()=>{ localStorage.removeItem(SESSION); render(); speakAtlas('Você saiu da conta. Até a próxima, motorista.',true); };
+function rankFor(m){ const c=Number(m.comboios||0); if(m.admin)return '👑 Líder'; if(c>=20)return '🥇 Veterano'; if(c>=5)return '🥈 Estradeiro'; return '🥉 Novato'; }
+function render(){ const ms=getMembers(); const cur=current(); const dls=downloads(); $('#membersCount').textContent=ms.length; $('#downloadCounter').textContent=dls.length; const cities=[...new Set(ms.map(m=>m.cidade).filter(Boolean))]; $('#cityCount').textContent=cities.length; if(cur){ $('#loginStatusTitle').textContent='Membro conectado'; $('#loginStatus').textContent=`Bem-vindo, ${cur.nome}. Downloads liberados para membro da empresa.`; $('#driverName').textContent=cur.nome; $('#driverRank').textContent=rankFor(cur); $('#driverStatus').textContent='Membro cadastrado'; $('#driverNick').textContent=cur.nick||'---'; $('#driverCity').textContent=cur.cidade||'---'; $('#driverDiscord').textContent=cur.discord||'---'; $('#driverYoutube').textContent=cur.youtube? 'Canal informado':'---'; $('#profileDownloads').textContent=dls.filter(x=>x.email===cur.email).length; $('#profileComboios').textContent=cur.comboios||0; $('#profilePrints').textContent=cur.prints||0; $('#profileLive').textContent=cur.lives||0; $('#profileSince').textContent=cur.desde||'---'; $('#profileLevel').textContent=rankFor(cur).replace(/^..\s/,''); } else { $('#loginStatusTitle').textContent='Sistema de Cadastro Amigos da Estrada'; $('#loginStatus').textContent='Cadastre-se para liberar downloads e criar seu perfil de motorista.'; $('#driverName').textContent='Visitante'; $('#driverRank').textContent='🔒 Sem cadastro'; $('#driverStatus').textContent='Aguardando cadastro'; $('#driverNick').textContent='---'; $('#driverCity').textContent='---'; $('#driverDiscord').textContent='---'; $('#driverYoutube').textContent='---'; $('#profileDownloads').textContent='0'; $('#profileSince').textContent='---'; $('#profileLevel').textContent='Novato'; } }
+$('#memberForm').onsubmit=e=>{ e.preventDefault(); const f=new FormData(e.target); const data=Object.fromEntries(f.entries()); const ms=getMembers(); if(ms.some(m=>m.email.toLowerCase()===data.email.toLowerCase())){ $('#cadastroNotice').classList.remove('hidden'); $('#cadastroNotice').textContent='Esse e-mail já está cadastrado. Use o login abaixo.'; return; } const hoje=new Date().toLocaleDateString('pt-BR'); const member={nome:data.nome,nick:data.nick,email:data.email,senha:data.senha,cidade:data.cidade,discord:data.discord,youtube:data.youtube,desde:hoje,comboios:0,prints:0,lives:0,admin:false}; ms.push(member); setMembers(ms); setCurrent(member); $('#cadastroNotice').classList.remove('hidden'); $('#cadastroNotice').textContent='Cadastro realizado! Bem-vindo à empresa Amigos da Estrada.'; e.target.reset(); showSite(); location.hash='perfil'; speakAtlas('Cadastro realizado. Bem-vindo à empresa Amigos da Estrada. Downloads liberados para membro.',true); };
+$('#loginForm').onsubmit=e=>{ e.preventDefault(); const f=new FormData(e.target); const email=f.get('emailLogin'), senha=f.get('senhaLogin'); const m=getMembers().find(x=>x.email.toLowerCase()===String(email).toLowerCase()&&x.senha===senha); if(!m){ alert('E-mail ou senha incorretos.'); return; } setCurrent(m); showSite(); location.hash='perfil'; speakAtlas('Login realizado. Bem-vindo de volta, motorista.',true); };
+$('#limparDadosBtn').onclick=()=>{ if(confirm('Apagar cadastros locais deste navegador?')){ localStorage.removeItem(DBKEY); localStorage.removeItem(SESSION); localStorage.removeItem(DLS); render(); }};
+function openDownloadGate(e){ const cur=current(); if(!cur){ e.preventDefault(); $('#downloadModal').classList.add('show'); return; } const file=e.currentTarget.dataset.file||'download'; const d=downloads(); d.push({email:cur.email,file,quando:new Date().toISOString()}); setDownloads(d); render(); speakAtlas('Download liberado para membro Amigos da Estrada.',true); }
+$$('.protectedDownload').forEach(a=>a.addEventListener('click',openDownloadGate)); $('#closeModal')?.addEventListener('click',()=>$('#downloadModal').classList.remove('show')); $('#modalRegisterBtn')?.addEventListener('click',()=>{ $('#downloadModal').classList.remove('show'); location.hash='cadastro'; });
+
+// ADDONS v5.2 mantendo Home da v1.1
+const CFG='aec_config_v52'; let deferredPrompt=null;
+const defaultLinks=[
+ {sel:'a[href="https://chat.whatsapp.com/FVsXXYbhXUyDdSC5A8SOzH"]',name:'WhatsApp Oficial',url:'https://chat.whatsapp.com/FVsXXYbhXUyDdSC5A8SOzH'},
+ {sel:'a[href="https://discord.gg/GZPtZvfZ"]',name:'Discord Oficial',url:'https://discord.gg/GZPtZvfZ'},
+ {sel:'a[href="https://www.youtube.com/@JenMasterGamers"]',name:'JenMaster Gamers',url:'https://www.youtube.com/@JenMasterGamers'},
+ {sel:'a[href="https://www.youtube.com/@SQS%C3%89oMaGnaTa"]',name:'É o MaGnaTa',url:'https://www.youtube.com/@SQS%C3%89oMaGnaTa'},
+ {sel:'a[href="https://youtube.com/@roger46oficial?si=hI2EmnFGovAPy_tp"]',name:'Roger46 Oficial',url:'https://youtube.com/@roger46oficial?si=hI2EmnFGovAPy_tp'},
+ {sel:'a[href="https://steamcommunity.com/sharedfiles/filedetails/?id=3730350601"]',name:'Workshop Steam',url:'https://steamcommunity.com/sharedfiles/filedetails/?id=3730350601'},
+ {sel:'a[href="https://modsfire.com/9AnblRt9DH9EI3J"]',name:'MRH ReShade',url:'https://modsfire.com/9AnblRt9DH9EI3J'}
+];
+function cfg(){return JSON.parse(localStorage.getItem(CFG)||JSON.stringify({links:defaultLinks,items:[],voice:'futurista',phrase:'Olá, motorista. Sistemas do comboio online.'}))}
+function saveCfg(c){localStorage.setItem(CFG,JSON.stringify(c))}
+function applyCfg(){const c=cfg(); c.links.forEach(l=>{$$(l.sel).forEach(a=>a.href=l.url)}); renderExtras(); $$('.socialCard,.downloadCard,.panel,.stat,.driverCard,.driverStats').forEach(x=>x.classList.add('gameCard'));}
+function renderExtras(){const c=cfg(); const bg=$('#brindeGrid'); if(bg){ bg.innerHTML=''; const brindes=c.items.filter(i=>i.type==='brinde'); (brindes.length?brindes:[{title:'Brinde do Comboio',url:'#',type:'brinde'}]).forEach(i=>{bg.insertAdjacentHTML('beforeend',`<a class="downloadCard" href="${i.url}" target="_blank"><h3>🎁 ${i.title}</h3><p>Recompensa oficial Amigos da Estrada.</p><b>Resgatar</b></a>`)}); const dg=$('#downloads .downloadGrid'); c.items.filter(i=>i.type==='download').forEach(i=>{ if(!document.querySelector(`[data-extra-title="${i.title}"]`)) dg.insertAdjacentHTML('beforeend',`<a class="downloadCard protectedDownload" data-extra-title="${i.title}" data-file="${i.title}" href="${i.url}" target="_blank"><h3>📥 ${i.title}</h3><p>Download adicionado pelo painel admin.</p><b>Baixar</b></a>`)}); $$('.protectedDownload').forEach(a=>{a.removeEventListener('click',openDownloadGate);a.addEventListener('click',openDownloadGate)}); }}
+function renderAdmin(){const c=cfg(); const box=$('#adminLinks'); if(!box)return; box.innerHTML=''; c.links.forEach((l,i)=>box.insertAdjacentHTML('beforeend',`<div class="adminRow"><input value="${l.name}" data-i="${i}" data-k="name"><input value="${l.url}" data-i="${i}" data-k="url"><button class="dangerBtn" type="button" data-del="${i}">X</button></div>`));}
+$('#unlockAdmin')?.addEventListener('click',()=>{ if($('#adminPass').value==='admin123'){ $('#adminArea').classList.remove('hidden'); renderAdmin(); speakAtlas('Painel administrador liberado.',true)} else alert('Senha incorreta')});
+$('#saveLinks')?.addEventListener('click',()=>{const c=cfg(); $$('#adminLinks input').forEach(inp=>{c.links[inp.dataset.i][inp.dataset.k]=inp.value}); saveCfg(c); applyCfg(); alert('Links salvos')});
+$('#adminLinks')?.addEventListener('click',e=>{if(e.target.dataset.del){const c=cfg(); c.links.splice(Number(e.target.dataset.del),1); saveCfg(c); renderAdmin(); applyCfg();}});
+$('#addItem')?.addEventListener('click',()=>{const c=cfg(); if(!$('#newTitle').value||!$('#newUrl').value)return alert('Coloque nome e link'); c.items.push({title:$('#newTitle').value,url:$('#newUrl').value,type:$('#newType').value}); saveCfg(c); $('#newTitle').value=''; $('#newUrl').value=''; applyCfg(); alert('Item adicionado')});
+$('#saveAtlas')?.addEventListener('click',()=>{const c=cfg(); c.voice=$('#voiceMode').value; c.phrase=$('#atlasPhrase').value; saveCfg(c); speakAtlas(c.phrase,true)});
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e; $('#installApp')?.classList.remove('hidden')});
+function doInstall(){ if(deferredPrompt){deferredPrompt.prompt();deferredPrompt=null}else alert('Quando o site estiver na Vercel/HTTPS, o Chrome libera a instalação como app.') }
+$('#installApp')?.addEventListener('click',doInstall); $('#installApp2')?.addEventListener('click',doInstall);
+const oldShowSite=showSite; showSite=function(){oldShowSite(); $('#floatingAtlas')?.classList.remove('hidden'); $('#installApp')?.classList.remove('hidden'); applyCfg();};
+const oldRender=render; render=function(){oldRender(); const cur=current(); if($('#cardNome')){ $('#cardNome').textContent=cur?cur.nome:'Visitante'; $('#cardPermissao').textContent=cur?'Membro liberado':'Visitante'; $('#cardStatus').textContent=cur?'Ativo':'Aguardando cadastro'; const xp=cur?((cur.comboios||0)*100 + downloads().filter(x=>x.email===cur.email).length*20):0; $('#cardXP').textContent=xp; $('#cardNivel').textContent=cur?rankFor(cur).replace(/^..\s/,''):'Novato'; $('#cardConquista').textContent=cur?Math.floor(xp/200):0;} applyCfg();};
+if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(()=>{})}
+
+
+
+// ===== BUILD REAL v5.3 LAUNCH EDITION - preserva Home v1.1 e adiciona funções finais =====
+const CFG53='aec_config_v53_launch';
+const defaults53={
+  fixedLinks:[
+    {id:'whatsapp',name:'WhatsApp Oficial',url:'https://chat.whatsapp.com/FVsXXYbhXUyDdSC5A8SOzH'},
+    {id:'discord',name:'Discord Oficial',url:'https://discord.gg/GZPtZvfZ'},
+    {id:'youtube',name:'YouTube Oficial',url:'https://www.youtube.com/@SQS%C3%89oMaGnaTa'},
+    {id:'workshop',name:'Workshop Steam',url:'https://steamcommunity.com/sharedfiles/filedetails/?id=3730350601'},
+    {id:'mrh',name:'MRH ReShade',url:'https://modsfire.com/9AnblRt9DH9EI3J'}
+  ],
+  fixedDownloads:[
+    {name:'Mods Gráficos',url:'#'},
+    {name:'Mods Comboio',url:'#'},
+    {name:'Mods Steam',url:'https://steamcommunity.com/sharedfiles/filedetails/?id=3730350601'},
+    {name:'Mapas',url:'#'},
+    {name:'Complementos EAA',url:'#'}
+  ],
+  extraLinks:[], extraDownloads:[], gifts:[{title:'Brinde do Comboio',url:'#'}],
+  voice:'humana', phrase:'Olá, motorista. Sistemas do comboio online.', visual:{}
+};
+function cfg53(){return JSON.parse(localStorage.getItem(CFG53)||JSON.stringify(defaults53))}
+function saveCfg53(c){localStorage.setItem(CFG53,JSON.stringify(c))}
+function setImgSrcAll(sel,src){$$(sel).forEach(el=>{if(src)el.src=src})}
+function applyVisual53(){const c=cfg53(); if(c.visual.bootBg) $('#bootScreen').style.backgroundImage=`linear-gradient(rgba(1,7,18,.58),rgba(1,7,18,.82)),url(${c.visual.bootBg})`; if(c.visual.atlasBg) $('.atlasArt').style.backgroundImage=`url(${c.visual.atlasBg})`; if(c.visual.homeBg){let st=document.getElementById('homeBgOverride'); if(!st){st=document.createElement('style');st.id='homeBgOverride';document.head.appendChild(st)} st.textContent=`.hero:before{background:linear-gradient(90deg,rgba(2,8,20,.28),rgba(1,9,24,.78)),url(${c.visual.homeBg}) center/cover no-repeat!important}`;} if(c.visual.logo){setImgSrcAll('img[src="assets/logo.png"],.brand img,.heroLogo img,.bootLogo,.footLogo img',c.visual.logo); const mi=document.querySelector('link[rel="manifest"]');}}
+function renderMainLinks53(){const c=cfg53(); const grid=$('#comunidade .socialGrid'); if(!grid)return; grid.innerHTML=''; const cards=[...c.fixedLinks,...c.extraLinks]; cards.forEach(l=>{let cls=l.id==='whatsapp'?'wa':(l.id==='discord'?'dc':'yt'); let icon=l.id==='whatsapp'?'☘':(l.id==='discord'?'☯':(l.id==='workshop'?'🎮':(l.id==='mrh'?'💎':'▶'))); let label=l.id==='discord'?'Entrar no Servidor':(l.id==='whatsapp'?'Entrar no Grupo':(l.id==='workshop'?'Abrir Workshop':(l.id==='mrh'?'Baixar MRH':'Visitar Canal'))); grid.insertAdjacentHTML('beforeend',`<a class="socialCard ${cls}" href="${l.url}" target="_blank"><div class="iconBox">${icon}</div><div><h3>${l.name}</h3><p>Link oficial Amigos da Estrada.</p><span class="btnMini">${label}</span></div></a>`)});}
+function renderDownloads53(){const c=cfg53(); const dg=$('#downloads .downloadGrid'); if(!dg)return; dg.innerHTML=''; [...c.fixedDownloads,...c.extraDownloads].forEach((d,i)=>{dg.insertAdjacentHTML('beforeend',`<a class="downloadCard protectedDownload" data-file="${d.name}" href="${d.url||'#'}" target="_blank"><h3>📥 ${d.name}</h3><p>Download oficial Amigos da Estrada.</p><b>Abrir / Baixar</b></a>`)}); const mrh=$('#mrh .mrhBtn'); if(mrh){let m=c.fixedLinks.find(x=>x.id==='mrh'); if(m)mrh.href=m.url;} const join=$('#comboio .join'); let dc=c.fixedLinks.find(x=>x.id==='discord'); if(join&&dc)join.href=dc.url; $$('.protectedDownload').forEach(a=>{a.removeEventListener('click',openDownloadGate);a.addEventListener('click',openDownloadGate)});}
+function renderGifts53(){const c=cfg53(); const bg=$('#brindeGrid'); if(!bg)return; bg.innerHTML=''; c.gifts.forEach(g=>bg.insertAdjacentHTML('beforeend',`<a class="downloadCard" href="${g.url}" target="_blank"><h3>🎁 ${g.title}</h3><p>Recompensa oficial Amigos da Estrada.</p><b>Resgatar</b></a>`));}
+function applyCfg53(){applyVisual53(); renderMainLinks53(); renderDownloads53(); renderGifts53(); $$('.socialCard,.downloadCard,.panel,.stat,.driverCard,.driverStats').forEach(x=>x.classList.add('gameCard'));}
+function row53(item,i,type){return `<div class="adminRow4"><input value="${item.name||item.title}" data-type="${type}" data-i="${i}" data-k="name"><input value="${item.url}" data-type="${type}" data-i="${i}" data-k="url"><button class="dangerBtn" type="button" data-deltype="${type}" data-del="${i}">X</button></div>`}
+function renderAdmin53(){const c=cfg53(); $('#adminFixedLinks').innerHTML=c.fixedLinks.map((x,i)=>row53(x,i,'fixedLinks')).join(''); $('#adminFixedDownloads').innerHTML=c.fixedDownloads.map((x,i)=>row53(x,i,'fixedDownloads')).join(''); $('#adminExtraLinks').innerHTML=c.extraLinks.map((x,i)=>row53(x,i,'extraLinks')).join(''); $('#adminExtraDownloads').innerHTML=c.extraDownloads.map((x,i)=>row53(x,i,'extraDownloads')).join(''); $('#adminGifts').innerHTML=c.gifts.map((x,i)=>`<div class="adminRow4"><input value="${x.title}" data-type="gifts" data-i="${i}" data-k="title"><input value="${x.url}" data-type="gifts" data-i="${i}" data-k="url"><button class="dangerBtn" type="button" data-deltype="gifts" data-del="${i}">X</button></div>`).join(''); $('#voiceMode53').value=c.voice||'humana'; $('#atlasPhrase53').value=c.phrase||defaults53.phrase;}
+function saveAdminRows53(){const c=cfg53(); $$('#adminArea53 input[data-type]').forEach(inp=>{let arr=c[inp.dataset.type]; let key=inp.dataset.k==='name'?(inp.dataset.type==='gifts'?'title':'name'):inp.dataset.k; arr[Number(inp.dataset.i)][key]=inp.value}); saveCfg53(c); applyCfg53(); renderAdmin53();}
+$('#unlockAdmin53')?.addEventListener('click',()=>{ if($('#adminPass53').value==='992824'){ $('#adminArea53').classList.remove('hidden'); renderAdmin53(); speakAtlas('Painel administrador liberado.',true)} else alert('Senha incorreta')});
+$('#saveFixedLinks')?.addEventListener('click',()=>{saveAdminRows53(); alert('Links fixos salvos')});
+$('#saveFixedDownloads')?.addEventListener('click',()=>{saveAdminRows53(); alert('Downloads fixos salvos')});
+$('#addExtraLink')?.addEventListener('click',()=>{const c=cfg53(); if(!$('#extraLinkName').value||!$('#extraLinkUrl').value)return alert('Coloque nome e link'); c.extraLinks.push({id:'extra',name:$('#extraLinkName').value,url:$('#extraLinkUrl').value}); saveCfg53(c); $('#extraLinkName').value=''; $('#extraLinkUrl').value=''; applyCfg53(); renderAdmin53();});
+$('#addExtraDownload')?.addEventListener('click',()=>{const c=cfg53(); if(!$('#extraDownloadName').value||!$('#extraDownloadUrl').value)return alert('Coloque nome e link'); c.extraDownloads.push({name:$('#extraDownloadName').value,url:$('#extraDownloadUrl').value}); saveCfg53(c); $('#extraDownloadName').value=''; $('#extraDownloadUrl').value=''; applyCfg53(); renderAdmin53();});
+$('#addGift53')?.addEventListener('click',()=>{const c=cfg53(); if(!$('#newGiftTitle').value||!$('#newGiftUrl').value)return alert('Coloque nome e link'); c.gifts.push({title:$('#newGiftTitle').value,url:$('#newGiftUrl').value}); saveCfg53(c); $('#newGiftTitle').value=''; $('#newGiftUrl').value=''; applyCfg53(); renderAdmin53();});
+$('#adminArea53')?.addEventListener('click',e=>{if(e.target.dataset.del){const c=cfg53(); c[e.target.dataset.deltype].splice(Number(e.target.dataset.del),1); saveCfg53(c); applyCfg53(); renderAdmin53();}});
+$('#saveAtlas53')?.addEventListener('click',()=>{const c=cfg53(); c.voice=$('#voiceMode53').value; c.phrase=$('#atlasPhrase53').value; saveCfg53(c); speakAtlas(c.phrase,true)});
+function readFileToCfg(inputId,key){$('#'+inputId)?.addEventListener('change',e=>{const f=e.target.files[0]; if(!f)return; const r=new FileReader(); r.onload=()=>{const c=cfg53(); c.visual[key]=r.result; saveCfg53(c); applyVisual53(); alert('Imagem salva no navegador')}; r.readAsDataURL(f);});}
+readFileToCfg('bgBootFile','bootBg'); readFileToCfg('bgAtlasFile','atlasBg'); readFileToCfg('bgHomeFile','homeBg'); readFileToCfg('logoFile','logo');
+function finishBoot53(){ const boot=$('#bootScreen'); if(boot){ boot.classList.add('hidden'); boot.style.display='none'; } $('#portal')?.classList.remove('hidden'); speakAtlas(cfg53().phrase,true); }
+$('#bootSkip')?.addEventListener('click',finishBoot53); setTimeout(finishBoot53,4200);
+const showSiteV53=showSite; showSite=function(){showSiteV53(); $('#bootScreen')?.classList.add('hidden'); $('#floatingAtlas')?.classList.remove('hidden'); $('#installApp')?.classList.remove('hidden'); applyCfg53();};
+const renderV53=render; render=function(){renderV53(); const cur=current(); const box=$('#loggedMemberBox'); const mf=$('#memberForm'); const lf=$('#loginForm'); if(box&&mf&&lf){ if(cur){box.style.display='block'; mf.style.display='none'; lf.style.display='none'; $('#loggedWelcome').textContent=`Bem-vindo de volta, ${cur.nome}.`; } else {box.style.display='none'; mf.style.display='grid'; lf.style.display='grid'; }} applyCfg53();};
+function logoutToAtlas53(){localStorage.removeItem(SESSION); $('#siteHeader').classList.add('hidden'); $('#home').classList.add('hidden'); $('#comunidade').classList.add('hidden'); $('#portalMain').classList.add('hidden'); $('#siteFooter').classList.add('hidden'); $('#floatingAtlas')?.classList.add('hidden'); $('#portal').classList.remove('hidden'); location.hash=''; render(); speakAtlas('Você saiu da conta. Até a próxima, motorista.',true);}
+$('#loggedLogout')?.addEventListener('click',logoutToAtlas53); $('#logoutBtn')?.addEventListener('click',e=>{e.preventDefault();logoutToAtlas53();});
+applyCfg53(); render();
+
+
+// ===== FINAL VERCEL RELEASE PATCH =====
+const MISSION_KEY='aec_atlas_mission_done_v53';
+let pendingDownloadHref=null;
+function missionDone(){return localStorage.getItem(MISSION_KEY)==='yes'}
+function openDownloadGate(e){
+  const cur=current();
+  if(!cur){ e.preventDefault(); $('#downloadModal').classList.add('show'); speakAtlas('Motorista, faça seu cadastro para liberar os downloads oficiais.',true); return; }
+  if(!missionDone()){
+    e.preventDefault();
+    pendingDownloadHref=e.currentTarget.href;
+    $('#downloadModal').classList.add('show');
+    speakAtlas('Motorista, antes de liberar os downloads, conheça os canais parceiros e ajude nossa comunidade crescer.',true);
+    return;
+  }
+  const file=e.currentTarget.dataset.file||'download';
+  const d=downloads(); d.push({email:cur.email,file,quando:new Date().toISOString()}); setDownloads(d); render();
+  speakAtlas('Obrigado por ajudar a crescer nossa comunidade. Download liberado.',true);
+}
+function bindDownloadsFinal(){ $$('.protectedDownload').forEach(a=>{a.onclick=openDownloadGate;}); }
+let missionClicks=new Set(JSON.parse(localStorage.getItem('aec_mission_clicks_v53')||'[]'));
+function updateMissionUI(){ $$('.missionLink').forEach(a=>{if(missionClicks.has(a.dataset.mission)) a.classList.add('done')}); const n=$('#missionNotice'); if(n){n.textContent=missionDone()?'Missão concluída. Downloads liberados neste navegador.':'Abra os 3 canais para o Atlas liberar os downloads neste navegador.'} }
+$$('.missionLink').forEach(a=>a.addEventListener('click',()=>{missionClicks.add(a.dataset.mission); localStorage.setItem('aec_mission_clicks_v53',JSON.stringify([...missionClicks])); setTimeout(()=>{ if(missionClicks.size>=3){localStorage.setItem(MISSION_KEY,'yes'); $('#downloadModal').classList.remove('show'); speakAtlas('Obrigado por ajudar a crescer nossa comunidade. Downloads liberados.',true); if(pendingDownloadHref && pendingDownloadHref !== '#') window.open(pendingDownloadHref,'_blank'); } updateMissionUI();},400)}));
+$('#closeModal')?.addEventListener('click',()=>$('#downloadModal').classList.remove('show'));
+$('#saveAllAdmin53')?.addEventListener('click',()=>{saveAdminRows53(); $('#adminArea53').classList.add('hidden'); $('#adminPass53').value=''; speakAtlas('Configurações atualizadas.',true); alert('Alterações salvas com sucesso.');});
+const applyCfg53Final=applyCfg53; applyCfg53=function(){applyCfg53Final(); bindDownloadsFinal(); updateMissionUI();};
+setTimeout(()=>{applyCfg53(); bindDownloadsFinal(); updateMissionUI();},200);
+
+</script>
+
+
+
+
+<script>
+// BUILD REAL v5.6.1 — Cadastro local + downloads livres
+(function(){
+  function $(s){return document.querySelector(s)}
+  function $$(s){return document.querySelectorAll(s)}
+  const DBKEY='aec_members_v11', SESSION='aec_current_member_v11';
+  function getMembers(){try{return JSON.parse(localStorage.getItem(DBKEY)||'[]')}catch(e){return []}}
+  function setMembers(v){localStorage.setItem(DBKEY,JSON.stringify(v))}
+  function setCurrent(m){localStorage.setItem(SESSION,JSON.stringify(m))}
+  function current(){try{return JSON.parse(localStorage.getItem(SESSION)||'null')}catch(e){return null}}
+  function openLocalModal(){
+    $('#authChoiceModal')?.classList.add('show');
+    const cur=current();
+    if(cur){
+      $('#localNome').value=cur.nome||''; $('#localNick').value=cur.nick||''; $('#localEmail').value=cur.email||'';
+      $('#localCidade').value=cur.cidade||''; $('#localDiscord').value=cur.discord||''; $('#localYoutube').value=cur.youtube||'';
+      $('#authStatus').textContent='Bem-vindo de volta, '+(cur.nick||cur.nome||'motorista')+'. Você pode entrar ou atualizar seus dados locais.';
+    } else {
+      $('#authStatus').textContent='Cadastro local ativo. Seus dados ficam salvos neste navegador para entrar no portal Amigos da Estrada.';
+    }
+  }
+  function closeLocalModal(){ $('#authChoiceModal')?.classList.remove('show'); }
+  function enterPortal(member, msg){
+    setCurrent(member);
+    closeLocalModal();
+    try{ if(typeof window.showSite==='function') window.showSite(); }catch(e){}
+    $('#portal')?.classList.add('hidden'); $('#siteHeader')?.classList.remove('hidden'); $('#home')?.classList.remove('hidden');
+    $('#comunidade')?.classList.remove('hidden'); $('#portalMain')?.classList.remove('hidden'); $('#siteFooter')?.classList.remove('hidden');
+    $('#floatingAtlas')?.classList.remove('hidden'); $('#installApp')?.classList.remove('hidden');
+    try{ if(typeof window.render==='function') window.render(); }catch(e){}
+    try{ if(typeof window.applyCfg53==='function') window.applyCfg53(); }catch(e){}
+    location.hash='perfil';
+    const nome=member.nick||member.nome||'motorista';
+    try{ if(typeof window.speakAtlas==='function') window.speakAtlas(msg||('Bem-vindo ao Amigos da Estrada, '+nome+'.'), true); }catch(e){}
+  }
+  function saveLocalCadastro(e){
+    if(e){e.preventDefault(); e.stopPropagation();}
+    const nome=($('#localNome')?.value||'').trim();
+    const nick=($('#localNick')?.value||nome).trim();
+    const email=($('#localEmail')?.value||'').trim().toLowerCase();
+    const senha=$('#localSenha')?.value||'';
+    if(!nome || !nick || !email || !senha){ alert('Preencha nome, nick ETS2, e-mail e senha.'); return false; }
+    const ms=getMembers();
+    const idx=ms.findIndex(m=>(m.email||'').toLowerCase()===email);
+    const old=idx>=0?ms[idx]:{};
+    const member={...old,nome,nick,email,senha,cidade:($('#localCidade')?.value||''),discord:($('#localDiscord')?.value||''),youtube:($('#localYoutube')?.value||''),provider:'local',desde:old.desde||new Date().toLocaleDateString('pt-BR'),comboios:Number(old.comboios||0),prints:Number(old.prints||0),lives:Number(old.lives||0),admin:!!old.admin};
+    if(idx>=0) ms[idx]=member; else ms.push(member);
+    setMembers(ms);
+    enterPortal(member,'Cadastro confirmado. Bem-vindo ao Amigos da Estrada, '+(nick||nome)+'.');
+    return false;
+  }
+  function loginLocal(e){
+    if(e){e.preventDefault(); e.stopPropagation();}
+    const email=($('#loginLocalEmail')?.value||'').trim().toLowerCase();
+    const senha=$('#loginLocalSenha')?.value||'';
+    const member=getMembers().find(m=>(m.email||'').toLowerCase()===email && String(m.senha||'')===String(senha));
+    if(!member){ alert('E-mail ou senha incorretos.'); return false; }
+    enterPortal(member,'Bem-vindo de volta, '+(member.nick||member.nome||'motorista')+'. Sistemas do comboio online.');
+    return false;
+  }
+  function logoutToAtlasLocal(){
+    localStorage.removeItem(SESSION);
+    $('#siteHeader')?.classList.add('hidden'); $('#home')?.classList.add('hidden'); $('#comunidade')?.classList.add('hidden');
+    $('#portalMain')?.classList.add('hidden'); $('#siteFooter')?.classList.add('hidden'); $('#floatingAtlas')?.classList.add('hidden');
+    $('#portal')?.classList.remove('hidden'); location.hash='';
+    try{ if(typeof window.speakAtlas==='function') window.speakAtlas('Você saiu da conta. Até a próxima, motorista.', true); }catch(e){}
+  }
+  window.AEC_OPEN_AUTH=openLocalModal;
+  window.logoutToAtlas53=logoutToAtlasLocal;
+  document.addEventListener('DOMContentLoaded', function(){
+    $('#authCloseBtn')?.addEventListener('click', closeLocalModal);
+    $('#localAtlasForm')?.addEventListener('submit', saveLocalCadastro, true);
+    $('#localFinalizeBtn')?.addEventListener('click', saveLocalCadastro, true);
+    $('#localLoginForm')?.addEventListener('submit', loginLocal, true);
+    ['goRegisterBtn','goLoginBtn','heroRegisterBtn'].forEach(id=>{ const el=$('#'+id); if(el) el.onclick=function(ev){ev.preventDefault();openLocalModal();}; });
+    $$('a[href="#cadastro"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();openLocalModal();}));
+    $('#logoutBtn')?.addEventListener('click', function(e){e.preventDefault(); logoutToAtlasLocal();}, true);
+    $('#loggedLogout')?.addEventListener('click', function(e){e.preventDefault(); logoutToAtlasLocal();}, true);
+  });
+})();
+</script>
+
+
+<script>
+// HOTFIX v5.5.1 — força modal de cadastro local e remove fluxo Google/Firebase da tela
+(function(){
+  function $(s){return document.querySelector(s)}
+  function $$(s){return Array.from(document.querySelectorAll(s))}
+  const DBKEY='aec_members_v11';
+  const SESSION='aec_current_member_v11';
+  function getMembers(){try{return JSON.parse(localStorage.getItem(DBKEY)||'[]')}catch(e){return []}}
+  function setMembers(v){localStorage.setItem(DBKEY, JSON.stringify(v))}
+  function setCurrent(m){localStorage.setItem(SESSION, JSON.stringify(m))}
+  function current(){try{return JSON.parse(localStorage.getItem(SESSION)||'null')}catch(e){return null}}
+  function speak(txt){try{ if(typeof window.speakAtlas==='function') window.speakAtlas(txt,true); }catch(e){}}
+  function showPortal(member){
+    setCurrent(member);
+    $('#authChoiceModal')?.classList.remove('show');
+    try{ if(typeof window.showSite==='function') window.showSite(); }catch(e){}
+    ['siteHeader','home','comunidade','portalMain','siteFooter','floatingAtlas','installApp'].forEach(id=>$('#'+id)?.classList.remove('hidden'));
+    $('#portal')?.classList.add('hidden');
+    try{ if(typeof window.render==='function') window.render(); }catch(e){}
+    try{ if(typeof window.applyCfg53==='function') window.applyCfg53(); }catch(e){}
+    location.hash='perfil';
+    speak('Bem-vindo ao Amigos da Estrada, '+(member.nick||member.nome||'motorista')+'. Sistemas do comboio online.');
+  }
+  function openModal(ev){
+    if(ev){ev.preventDefault(); ev.stopPropagation();}
+    const modal=$('#authChoiceModal'); if(!modal)return;
+    modal.classList.add('show');
+    const m=current();
+    if(m){
+      $('#localNome').value=m.nome||'';
+      $('#localNick').value=m.nick||'';
+      $('#localEmail').value=m.email||'';
+      $('#localSenha').value=m.senha||'';
+      $('#localCidade').value=m.cidade||'';
+      $('#localDiscord').value=m.discord||'';
+      $('#localYoutube').value=m.youtube||'';
+      $('#loginLocalEmail').value=m.email||'';
+      $('#authStatus').textContent='Bem-vindo de volta, '+(m.nick||m.nome||'motorista')+'. Atualize seus dados ou entre no portal.';
+    }else{
+      $('#authStatus').textContent='Cadastro local ativo. Seus dados ficam salvos neste navegador para entrar no portal Amigos da Estrada.';
+    }
+  }
+  function saveCadastro(ev){
+    if(ev){ev.preventDefault(); ev.stopPropagation();}
+    const nome=($('#localNome')?.value||'').trim();
+    const nick=($('#localNick')?.value||nome).trim();
+    const email=($('#localEmail')?.value||'').trim().toLowerCase();
+    const senha=($('#localSenha')?.value||'').trim();
+    if(!nome || !nick || !email || !senha){ alert('Preencha nome, nick ETS2, e-mail e senha.'); return false; }
+    const ms=getMembers();
+    const idx=ms.findIndex(x=>(x.email||'').toLowerCase()===email);
+    const old=idx>=0?ms[idx]:{};
+    const member={...old,nome,nick,email,senha,
+      cidade:($('#localCidade')?.value||'').trim(),
+      discord:($('#localDiscord')?.value||'').trim(),
+      youtube:($('#localYoutube')?.value||'').trim(),
+      provider:'local',
+      desde: old.desde || new Date().toLocaleDateString('pt-BR'),
+      comboios:Number(old.comboios||0), prints:Number(old.prints||0), lives:Number(old.lives||0), admin:!!old.admin
+    };
+    if(idx>=0) ms[idx]=member; else ms.push(member);
+    setMembers(ms);
+    showPortal(member);
+    return false;
+  }
+  function login(ev){
+    if(ev){ev.preventDefault(); ev.stopPropagation();}
+    const email=($('#loginLocalEmail')?.value||'').trim().toLowerCase();
+    const senha=($('#loginLocalSenha')?.value||'').trim();
+    const m=getMembers().find(x=>(x.email||'').toLowerCase()===email && String(x.senha||'')===String(senha));
+    if(!m){alert('E-mail ou senha incorretos.'); return false;}
+    showPortal(m);
+    return false;
+  }
+  function logout(ev){
+    if(ev){ev.preventDefault(); ev.stopPropagation();}
+    localStorage.removeItem(SESSION);
+    ['siteHeader','home','comunidade','portalMain','siteFooter','floatingAtlas'].forEach(id=>$('#'+id)?.classList.add('hidden'));
+    $('#portal')?.classList.remove('hidden');
+    location.hash='';
+    speak('Você saiu da conta. Até a próxima, motorista.');
+  }
+  window.AEC_OPEN_AUTH=openModal;
+  window.logoutToAtlas53=logout;
+  window.AEC_LOCAL_SAVE=saveCadastro;
+  document.addEventListener('DOMContentLoaded', function(){
+    $('#authCloseBtn')?.addEventListener('click', function(e){e.preventDefault();$('#authChoiceModal')?.classList.remove('show')}, true);
+    $('#localAtlasForm')?.addEventListener('submit', saveCadastro, true);
+    $('#localFinalizeBtn')?.addEventListener('click', saveCadastro, true);
+    $('#localLoginForm')?.addEventListener('submit', login, true);
+    ['goRegisterBtn','goLoginBtn','heroRegisterBtn'].forEach(id=>{const el=$('#'+id); if(el) el.onclick=openModal;});
+    $$('a[href="#cadastro"]').forEach(a=>a.addEventListener('click', openModal, true));
+    $('#logoutBtn')?.addEventListener('click', logout, true);
+    $('#loggedLogout')?.addEventListener('click', logout, true);
+  });
+})();
+</script>
+
+
+<script>
+// HOTFIX v5.5.2 — downloads sem bloqueio + fundos do Admin corrigidos
+(function(){
+  const $ = (s)=>document.querySelector(s);
+  const $$ = (s)=>Array.from(document.querySelectorAll(s));
+  const CFG53='aec_config_v53_launch';
+  function getCfg(){try{return JSON.parse(localStorage.getItem(CFG53)||'{}')}catch(e){return {}}}
+  function saveCfg(c){localStorage.setItem(CFG53, JSON.stringify(c||{}))}
+  function speak(txt){try{ if(typeof window.speakAtlas==='function') window.speakAtlas(txt,true); }catch(e){}}
+  function showSupportMessage(){
+    const modal=$('#downloadModal');
+    if(modal){
+      modal.classList.add('show');
+      const n=$('#missionNotice');
+      if(n) n.textContent='Obrigado por fortalecer nossa comunidade. Os downloads continuam liberados.';
+    }
+    speak('Motorista, os downloads estão liberados. Apoie nossos canais e entre no WhatsApp e Discord oficial para fortalecer o Amigos da Estrada.');
+  }
+  window.openDownloadGate=function(e){
+    const href=(e && e.currentTarget && e.currentTarget.getAttribute('href')) || '#';
+    showSupportMessage();
+    const file=(e && e.currentTarget && e.currentTarget.dataset.file)||'download';
+    try{
+      const cur=JSON.parse(localStorage.getItem('aec_current_member_v11')||'null');
+      const d=JSON.parse(localStorage.getItem('aec_downloads_v11')||'[]');
+      d.push({email:cur?.email||'visitante',file,quando:new Date().toISOString()});
+      localStorage.setItem('aec_downloads_v11',JSON.stringify(d));
+      if(typeof window.render==='function') window.render();
+    }catch(err){}
+    if(!href || href==='#'){
+      if(e) e.preventDefault();
+      return false;
+    }
+    return true;
+  };
+  function bindFreeDownloads(){
+    $$('.protectedDownload').forEach(a=>{
+      a.onclick=function(ev){ return window.openDownloadGate(ev); };
+      a.classList.remove('lockedDownload');
+    });
+    const badge=document.querySelector('#downloads .lockBadge');
+    if(badge) badge.textContent='✅ downloads liberados';
+  }
+  function applyVisualFix(){
+    const c=getCfg(); const v=c.visual||{};
+    let st=document.getElementById('aecVisualFixStyle');
+    if(!st){ st=document.createElement('style'); st.id='aecVisualFixStyle'; document.head.appendChild(st); }
+    let css='';
+    if(v.bootBg){ css += `.bootScreen{background-image:linear-gradient(rgba(1,7,18,.58),rgba(1,7,18,.82)),url("${v.bootBg}")!important;background-size:cover!important;background-position:center!important;}\n`; }
+    if(v.atlasBg){ css += `.atlasArt{background-image:url("${v.atlasBg}")!important;background-size:cover!important;background-position:center!important;}\n`; }
+    if(v.homeBg){ css += `.hero:before{background:linear-gradient(90deg,rgba(2,8,20,.28),rgba(1,9,24,.78)),url("${v.homeBg}") center/cover no-repeat!important;opacity:.48!important;}\n`; }
+    st.textContent=css;
+    if(v.logo){ $$('img[src="assets/logo.png"],.brand img,.heroLogo img,.bootLogo,.footLogo img').forEach(img=>img.src=v.logo); }
+  }
+  function hookFile(inputId,key){
+    const input=$('#'+inputId); if(!input || input.dataset.v552) return; input.dataset.v552='1';
+    input.addEventListener('change',function(ev){
+      const f=ev.target.files && ev.target.files[0]; if(!f) return;
+      const r=new FileReader();
+      r.onload=function(){ const c=getCfg(); c.visual=c.visual||{}; c.visual[key]=r.result; saveCfg(c); applyVisualFix(); alert('Imagem salva e aplicada no site.'); };
+      r.readAsDataURL(f);
+    }, true);
+  }
+  function init(){
+    bindFreeDownloads();
+    applyVisualFix();
+    hookFile('bgBootFile','bootBg');
+    hookFile('bgAtlasFile','atlasBg');
+    hookFile('bgHomeFile','homeBg');
+    hookFile('logoFile','logo');
+  }
+  const oldApply=window.applyCfg53;
+  window.applyCfg53=function(){ try{ if(typeof oldApply==='function') oldApply(); }catch(e){} init(); };
+  document.addEventListener('DOMContentLoaded', init);
+  setTimeout(init,200); setTimeout(init,1000);
+})();
+</script>
+
+
+
+<script>
+// HOTFIX v5.5.3 — cadastro local salvo + login robusto "Já sou membro"
+(function(){
+  const $=(s)=>document.querySelector(s);
+  const $$=(s)=>Array.from(document.querySelectorAll(s));
+  const DBKEY='aec_members_v11';
+  const SESSION='aec_current_member_v11';
+  const trim=(v)=>String(v||'').trim();
+  const lower=(v)=>trim(v).toLowerCase();
+  function getMembers(){try{return JSON.parse(localStorage.getItem(DBKEY)||'[]')}catch(e){return []}}
+  function setMembers(v){localStorage.setItem(DBKEY,JSON.stringify(v||[]))}
+  function current(){try{return JSON.parse(localStorage.getItem(SESSION)||'null')}catch(e){return null}}
+  function setCurrent(m){localStorage.setItem(SESSION,JSON.stringify(m))}
+  function speak(t){try{ if(typeof window.speakAtlas==='function') window.speakAtlas(t,true); }catch(e){}}
+  function memberFromCadastro(old={}){
+    const nome=trim($('#localNome')?.value)||trim(old.nome);
+    const nick=trim($('#localNick')?.value)||nome||trim(old.nick);
+    const email=lower($('#localEmail')?.value)||lower(old.email);
+    const senha=trim($('#localSenha')?.value)||trim(old.senha);
+    if(!nome || !nick || !email || !senha) return null;
+    return {...old,nome,nick,email,senha,
+      cidade:trim($('#localCidade')?.value)||trim(old.cidade),
+      discord:trim($('#localDiscord')?.value)||trim(old.discord),
+      youtube:trim($('#localYoutube')?.value)||trim(old.youtube),
+      provider:'local',desde:old.desde||new Date().toLocaleDateString('pt-BR'),
+      comboios:Number(old.comboios||0),prints:Number(old.prints||0),lives:Number(old.lives||0),admin:!!old.admin};
+  }
+  function upsertMember(member){
+    const ms=getMembers();
+    const i=ms.findIndex(x=>lower(x.email)===lower(member.email));
+    if(i>=0) ms[i]={...ms[i],...member}; else ms.push(member);
+    setMembers(ms); setCurrent(i>=0?ms[i]:member);
+    return i>=0?ms[i]:member;
+  }
+  function showPortal(member,msg){
+    setCurrent(member);
+    $('#authChoiceModal')?.classList.remove('show');
+    $('#portal')?.classList.add('hidden');
+    ['siteHeader','home','comunidade','portalMain','siteFooter','floatingAtlas','installApp'].forEach(id=>$('#'+id)?.classList.remove('hidden'));
+    try{ if(typeof window.showSite==='function') window.showSite(); }catch(e){}
+    try{ if(typeof window.render==='function') window.render(); }catch(e){}
+    try{ if(typeof window.applyCfg53==='function') window.applyCfg53(); }catch(e){}
+    location.hash='perfil';
+    speak(msg||('Bem-vindo de volta, '+(member.nick||member.nome||'motorista')+'. Sistemas do comboio online.'));
+  }
+  function saveAndEnter(ev){
+    if(ev){ev.preventDefault(); ev.stopPropagation(); if(ev.stopImmediatePropagation) ev.stopImmediatePropagation();}
+    const email=lower($('#localEmail')?.value);
+    const old=getMembers().find(x=>lower(x.email)===email)||current()||{};
+    const member=memberFromCadastro(old);
+    if(!member){ alert('Preencha nome, nick ETS2, e-mail e senha para salvar o cadastro local.'); return false; }
+    const saved=upsertMember(member);
+    showPortal(saved,'Cadastro salvo. Bem-vindo ao Amigos da Estrada, '+(saved.nick||saved.nome)+'.');
+    return false;
+  }
+  function loginMember(ev){
+    if(ev){ev.preventDefault(); ev.stopPropagation(); if(ev.stopImmediatePropagation) ev.stopImmediatePropagation();}
+    const email=lower($('#loginLocalEmail')?.value) || lower($('#localEmail')?.value);
+    const senha=trim($('#loginLocalSenha')?.value) || trim($('#localSenha')?.value);
+    const ms=getMembers();
+    let member=ms.find(x=>lower(x.email)===email && trim(x.senha)===senha);
+    if(!member){
+      // Se o usuário preencheu/atualizou os dados no formulário de cima, salva e entra em vez de travar no erro.
+      const sameTopEmail = email && email===lower($('#localEmail')?.value);
+      if(sameTopEmail){
+        const old=ms.find(x=>lower(x.email)===email)||{};
+        const m=memberFromCadastro(old);
+        if(m && trim(m.senha)===senha){ member=upsertMember(m); }
+      }
+    }
+    if(!member){ alert('Cadastro não encontrado ou senha diferente. Confira o e-mail/senha ou clique em Finalizar cadastro para salvar os dados.'); return false; }
+    setCurrent(member);
+    showPortal(member,'Bem-vindo de volta, '+(member.nick||member.nome||'motorista')+'. Sistemas do comboio online.');
+    return false;
+  }
+  function fillModal(){
+    const cur=current();
+    const members=getMembers();
+    const last=cur||members[members.length-1];
+    if(last){
+      if($('#localNome')) $('#localNome').value=last.nome||'';
+      if($('#localNick')) $('#localNick').value=last.nick||'';
+      if($('#localEmail')) $('#localEmail').value=last.email||'';
+      if($('#localSenha')) $('#localSenha').value=last.senha||'';
+      if($('#localCidade')) $('#localCidade').value=last.cidade||'';
+      if($('#localDiscord')) $('#localDiscord').value=last.discord||'';
+      if($('#localYoutube')) $('#localYoutube').value=last.youtube||'';
+      if($('#loginLocalEmail')) $('#loginLocalEmail').value=last.email||'';
+      if($('#loginLocalSenha')) $('#loginLocalSenha').value=last.senha||'';
+      const st=$('#authStatus'); if(st) st.textContent='Bem-vindo de volta, '+(last.nick||last.nome||'motorista')+'. Seus dados estão salvos neste navegador.';
+    }
+  }
+  function openAuth(ev){
+    if(ev){ev.preventDefault(); ev.stopPropagation(); if(ev.stopImmediatePropagation) ev.stopImmediatePropagation();}
+    $('#authChoiceModal')?.classList.add('show'); fillModal(); return false;
+  }
+  function bind(){
+    const finalBtn=$('#localFinalizeBtn');
+    if(finalBtn){ finalBtn.type='button'; finalBtn.onclick=saveAndEnter; finalBtn.addEventListener('click',saveAndEnter,true); }
+    const form=$('#localAtlasForm'); if(form){ form.onsubmit=saveAndEnter; form.addEventListener('submit',saveAndEnter,true); }
+    const loginBtn=$('#localLoginBtn') || document.querySelector('#localLoginForm button[type="submit"], #localLoginForm .primaryBtn');
+    if(loginBtn){ loginBtn.type='button'; loginBtn.onclick=loginMember; loginBtn.addEventListener('click',loginMember,true); }
+    const loginForm=$('#localLoginForm'); if(loginForm){ loginForm.onsubmit=loginMember; loginForm.addEventListener('submit',loginMember,true); }
+    ['goRegisterBtn','goLoginBtn','heroRegisterBtn'].forEach(id=>{const el=$('#'+id); if(el){el.onclick=openAuth; el.addEventListener('click',openAuth,true);}});
+    $$('a[href="#cadastro"]').forEach(a=>a.addEventListener('click',openAuth,true));
+    fillModal();
+  }
+  window.AEC_LOCAL_SAVE=saveAndEnter;
+  window.AEC_LOCAL_LOGIN=loginMember;
+  window.AEC_OPEN_AUTH=openAuth;
+  document.addEventListener('DOMContentLoaded',bind);
+  setTimeout(bind,100); setTimeout(bind,800); setTimeout(bind,1800);
+})();
+</script>
+
+
+
+<script>
+// BUILD REAL v5.6.1 — IMMERSION EDITION: vídeo no carregamento + sons de interface
+(function(){
+  const $=(s)=>document.querySelector(s);
+  const $$=(s)=>Array.from(document.querySelectorAll(s));
+  const CFG53='aec_config_v53_launch';
+  const AUDIO_KEY='aec_audio_v56';
+  const defaultAudio={hover:true,click:true,startup:true,volume:35,startupAudio:null};
+  let audioCtx=null; let unlocked=false; let lastHover=0;
+  function getCfg(){try{return JSON.parse(localStorage.getItem(CFG53)||'{}')}catch(e){return {}}}
+  function saveCfg(c){localStorage.setItem(CFG53,JSON.stringify(c||{}))}
+  function getAudio(){try{return {...defaultAudio,...JSON.parse(localStorage.getItem(AUDIO_KEY)||'{}')}}catch(e){return {...defaultAudio}}}
+  function saveAudio(a){localStorage.setItem(AUDIO_KEY,JSON.stringify({...defaultAudio,...a}))}
+  function unlock(){ if(unlocked) return; try{audioCtx=audioCtx||new (window.AudioContext||window.webkitAudioContext)(); audioCtx.resume(); unlocked=true;}catch(e){} }
+  document.addEventListener('pointerdown',unlock,{once:true});
+  function tone(freq=440,dur=.08,type='sine',gain=.06){
+    const a=getAudio(); if(!audioCtx) unlock(); if(!audioCtx) return;
+    try{ const o=audioCtx.createOscillator(); const g=audioCtx.createGain(); o.type=type; o.frequency.value=freq; g.gain.value=(a.volume/100)*gain; o.connect(g); g.connect(audioCtx.destination); o.start(); g.gain.exponentialRampToValueAtTime(0.0001,audioCtx.currentTime+dur); o.stop(audioCtx.currentTime+dur+.02);}catch(e){}
+  }
+  function hoverSound(){const a=getAudio(); if(!a.hover) return; const now=Date.now(); if(now-lastHover<90) return; lastHover=now; tone(620,.055,'triangle',.035)}
+  function clickSound(){const a=getAudio(); if(!a.click) return; tone(240,.045,'sine',.045); setTimeout(()=>tone(520,.07,'triangle',.05),45)}
+  function startupSound(){
+    const a=getAudio(); if(!a.startup) return;
+    if(a.startupAudio){ try{const au=new Audio(a.startupAudio); au.volume=Math.max(0,Math.min(1,a.volume/100)); au.play().catch(()=>{}); return;}catch(e){} }
+    unlock(); if(!audioCtx) return;
+    tone(130,.18,'sine',.045); setTimeout(()=>tone(260,.20,'sine',.04),180); setTimeout(()=>tone(520,.16,'triangle',.035),420); setTimeout(()=>tone(780,.24,'sine',.03),680);
+  }
+  function bindButtonSounds(){
+    $$('button,a,.tag,.socialCard,.downloadCard,.primaryBtn,.bigBtn,.ghostBtn,.smallBtn,.dangerBtn').forEach(el=>{
+      if(el.dataset.audioV56) return; el.dataset.audioV56='1';
+      el.addEventListener('mouseenter',hoverSound,{passive:true});
+      el.addEventListener('click',clickSound,true);
+    });
+  }
+  function applyBootVideo(){
+    const c=getCfg(); const v=(c.visual||{});
+    let vid=$('#bootVideoBg');
+    if(v.bootVideo){
+      if(!vid){ vid=document.createElement('video'); vid.id='bootVideoBg'; vid.className='bootVideoBg'; vid.autoplay=true; vid.muted=true; vid.loop=true; vid.playsInline=true; $('#bootScreen')?.prepend(vid); }
+      if(vid.src!==v.bootVideo) vid.src=v.bootVideo;
+      vid.play().catch(()=>{});
+    } else if(vid){ vid.remove(); }
+  }
+  function hookBootMedia(){
+    const input=$('#bgBootFile'); if(!input || input.dataset.v56) return; input.dataset.v56='1';
+    input.addEventListener('change',function(ev){
+      const f=ev.target.files&&ev.target.files[0]; if(!f) return;
+      const r=new FileReader();
+      r.onload=function(){const c=getCfg(); c.visual=c.visual||{}; if(f.type.startsWith('video/')){c.visual.bootVideo=r.result; delete c.visual.bootBg;} else {c.visual.bootBg=r.result; delete c.visual.bootVideo;} saveCfg(c); try{ if(typeof window.applyCfg53==='function') window.applyCfg53(); }catch(e){} applyBootVideo(); alert(f.type.startsWith('video/')?'Vídeo de carregamento salvo e aplicado.':'Imagem de carregamento salva e aplicada.');};
+      r.readAsDataURL(f);
+    },true);
+  }
+  function hookAudioAdmin(){
+    const a=getAudio();
+    if($('#audioHoverOn')) $('#audioHoverOn').checked=!!a.hover;
+    if($('#audioClickOn')) $('#audioClickOn').checked=!!a.click;
+    if($('#audioStartupOn')) $('#audioStartupOn').checked=!!a.startup;
+    if($('#audioVolume')) $('#audioVolume').value=a.volume;
+    function read(){const cur=getAudio(); return {...cur,hover:!!$('#audioHoverOn')?.checked,click:!!$('#audioClickOn')?.checked,startup:!!$('#audioStartupOn')?.checked,volume:Number($('#audioVolume')?.value||35)}}
+    ['audioHoverOn','audioClickOn','audioStartupOn','audioVolume'].forEach(id=>{const el=$('#'+id); if(el&&!el.dataset.v56){el.dataset.v56='1'; el.addEventListener('change',()=>saveAudio(read()),true);}});
+    const test=$('#testAudioBtn'); if(test&&!test.dataset.v56){test.dataset.v56='1'; test.addEventListener('click',()=>{saveAudio(read()); startupSound();},true);}
+    const inp=$('#startupAudioFile'); if(inp&&!inp.dataset.v56){inp.dataset.v56='1'; inp.addEventListener('change',ev=>{const f=ev.target.files&&ev.target.files[0]; if(!f) return; const r=new FileReader(); r.onload=()=>{const cur=read(); cur.startupAudio=r.result; saveAudio(cur); alert('Som de carregamento personalizado salvo.'); startupSound();}; r.readAsDataURL(f);},true);}
+  }
+  // salva áudio junto com o botão final do admin, sem quebrar o comportamento antigo
+  const oldApply=window.applyCfg53;
+  window.applyCfg53=function(){try{if(typeof oldApply==='function')oldApply();}catch(e){} applyBootVideo(); bindButtonSounds(); hookBootMedia(); hookAudioAdmin();};
+  const oldOpenDownload=window.openDownloadGate;
+  if(oldOpenDownload){ window.openDownloadGate=function(e){ clickSound(); return oldOpenDownload(e); }; }
+  function init(){applyBootVideo(); bindButtonSounds(); hookBootMedia(); hookAudioAdmin(); setTimeout(startupSound,350);}
+  document.addEventListener('DOMContentLoaded',init);
+  setTimeout(init,200); setTimeout(init,1000); setTimeout(init,2200);
+})();
+</script>
+
+
+
+<script>
+// HOTFIX v5.6.1 — botão "Salvar Alterações e Fechar Painel" robusto
+(function(){
+  const $=(s)=>document.querySelector(s);
+  const $$=(s)=>Array.from(document.querySelectorAll(s));
+  const CFG='aec_config_v53_launch';
+  const AUDIO='aec_audio_v56';
+  const defaults={
+    fixedLinks:[
+      {id:'whatsapp',name:'WhatsApp Oficial',url:'https://chat.whatsapp.com/FVsXXYbhXUyDdSC5A8SOzH'},
+      {id:'discord',name:'Discord Oficial',url:'https://discord.gg/GZPtZvfZ'},
+      {id:'youtube',name:'YouTube Oficial',url:'https://www.youtube.com/@SQS%C3%89oMaGnaTa'},
+      {id:'workshop',name:'Workshop Steam',url:'https://steamcommunity.com/sharedfiles/filedetails/?id=3730350601'},
+      {id:'mrh',name:'MRH ReShade',url:'https://modsfire.com/9AnblRt9DH9EI3J'}
+    ],
+    fixedDownloads:[
+      {name:'Mods Gráficos',url:'#'},
+      {name:'Mods Comboio',url:'#'},
+      {name:'Mods Steam',url:'https://steamcommunity.com/sharedfiles/filedetails/?id=3730350601'},
+      {name:'Mapas',url:'#'},
+      {name:'Complementos EAA',url:'#'}
+    ],
+    extraLinks:[], extraDownloads:[], gifts:[{title:'Brinde do Comboio',url:'#'}],
+    voice:'futurista', phrase:'Olá, motorista. Sistemas do comboio online.', visual:{}
+  };
+  function getCfg(){try{return Object.assign({}, defaults, JSON.parse(localStorage.getItem(CFG)||'{}'))}catch(e){return {...defaults}}}
+  function saveCfg(c){localStorage.setItem(CFG,JSON.stringify(c||defaults))}
+  function saveAudioFromPanel(){
+    const old=(()=>{try{return JSON.parse(localStorage.getItem(AUDIO)||'{}')}catch(e){return {}}})();
+    old.hover=!!$('#audioHoverOn')?.checked;
+    old.click=!!$('#audioClickOn')?.checked;
+    old.startup=!!$('#audioStartupOn')?.checked;
+    old.volume=Number($('#audioVolume')?.value||35);
+    localStorage.setItem(AUDIO,JSON.stringify(old));
+  }
+  function collectRows(type){
+    const rows=$$(`#adminArea53 input[data-type="${type}"][data-k]`).reduce((acc,inp)=>{
+      const i=Number(inp.dataset.i||0); acc[i]=acc[i]||{};
+      const key=(inp.dataset.k==='name' && type==='gifts')?'title':inp.dataset.k;
+      acc[i][key]=inp.value;
+      return acc;
+    },[]).filter(Boolean);
+    return rows;
+  }
+  function saveEverything(ev){
+    if(ev){ev.preventDefault();ev.stopPropagation();if(ev.stopImmediatePropagation)ev.stopImmediatePropagation();}
+    const c=getCfg();
+    const fl=collectRows('fixedLinks'); if(fl.length) c.fixedLinks=fl.map((x,i)=>Object.assign({id:(c.fixedLinks&&c.fixedLinks[i]&&c.fixedLinks[i].id)||'link'}, x));
+    const fd=collectRows('fixedDownloads'); if(fd.length) c.fixedDownloads=fd;
+    const el=collectRows('extraLinks'); c.extraLinks=el.map(x=>Object.assign({id:'extra'},x));
+    const ed=collectRows('extraDownloads'); c.extraDownloads=ed;
+    const gf=collectRows('gifts'); c.gifts=gf.length?gf:[{title:'Brinde do Comboio',url:'#'}];
+    c.voice=$('#voiceMode53')?.value || c.voice || 'futurista';
+    c.phrase=$('#atlasPhrase53')?.value || c.phrase || defaults.phrase;
+    c.visual=c.visual||{};
+    saveCfg(c);
+    saveAudioFromPanel();
+    try{ if(typeof window.applyCfg53==='function') window.applyCfg53(); }catch(e){}
+    const admin=$('#adminArea53'); if(admin) admin.classList.add('hidden');
+    const pass=$('#adminPass53'); if(pass) pass.value='';
+    try{ if(typeof window.speakAtlas==='function') window.speakAtlas('Configurações atualizadas.',true); }catch(e){}
+    alert('Alterações salvas com sucesso.');
+    return false;
+  }
+  function bind(){
+    const btn=$('#saveAllAdmin53');
+    if(!btn) return;
+    btn.type='button';
+    btn.onclick=saveEverything;
+    btn.addEventListener('click',saveEverything,true);
+  }
+  document.addEventListener('DOMContentLoaded',bind);
+  setTimeout(bind,100);setTimeout(bind,800);setTimeout(bind,2000);
+})();
+</script>
+
+
+<script>
+// CONNECTED EDITION: carrega configuração Supabase pelo Vercel Environment Variables.
+(function(){
+  const PROJECT_URL='https://aefkcynebkmgqoqtvkja.supabase.co';
+  try{
+    window.AEC_SUPABASE_URL = sessionStorage.getItem('AEC_SUPABASE_URL') || PROJECT_URL;
+    window.AEC_SUPABASE_ANON_KEY = sessionStorage.getItem('AEC_SUPABASE_ANON_KEY') || window.AEC_SUPABASE_ANON_KEY || '';
+  }catch(e){ window.AEC_SUPABASE_URL=PROJECT_URL; }
+  if(!window.AEC_SUPABASE_ANON_KEY && location.protocol.indexOf('http')===0){
+    fetch('/api/config', {cache:'no-store'}).then(r=>r.ok?r.json():null).then(cfg=>{
+      if(cfg && cfg.supabaseAnonKey){
+        sessionStorage.setItem('AEC_SUPABASE_URL', cfg.supabaseUrl || PROJECT_URL);
+        sessionStorage.setItem('AEC_SUPABASE_ANON_KEY', cfg.supabaseAnonKey);
+        if(!sessionStorage.getItem('AEC_CONFIG_RELOADED')){
+          sessionStorage.setItem('AEC_CONFIG_RELOADED','1');
+          location.reload();
+        }
+      }
+    }).catch(()=>{});
+  }
+})();
+</script>
+
+<!-- Supabase JS para dados reais compartilhados -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+// BUILD FINAL DE LANÇAMENTO — Correções reais de banco, privacidade, amigos, galeria e ADM exclusivo
+(function(){
+  const ADMIN_EMAILS=['wesleiarlindo26@gmail.com','wesleiarlindo34@gmail.com'];
+  // PREENCHA estes dois dados do seu projeto Supabase antes de publicar no Vercel.
+  window.AEC_SUPABASE_URL = window.AEC_SUPABASE_URL || 'https://aefkcynebkmgqoqtvkja.supabase.co';
+  window.AEC_SUPABASE_ANON_KEY = window.AEC_SUPABASE_ANON_KEY || sessionStorage.getItem('AEC_SUPABASE_ANON_KEY') || '';
+  const $=s=>document.querySelector(s); const $$=s=>Array.from(document.querySelectorAll(s));
+  const DBKEY='aec_members_v11', SESSION='aec_current_member_v11', DLS='aec_downloads_v11', CFG='aec_config_v53_launch';
+  const ready=()=>window.supabase && !!window.AEC_SUPABASE_URL && !!window.AEC_SUPABASE_ANON_KEY && !String(window.AEC_SUPABASE_URL).includes('COLE_AQUI') && !String(window.AEC_SUPABASE_ANON_KEY).includes('COLE_AQUI');
+  const sb=()=> ready()? window.supabase.createClient(window.AEC_SUPABASE_URL, window.AEC_SUPABASE_ANON_KEY):null;
+  let client=null, me=null, profiles=[], friendships=[], gallery=[];
+  function getClient(){ if(!client && ready()) client=sb(); return client; }
+  function isAdmin(email){return ADMIN_EMAILS.includes(String(email||'').toLowerCase());}
+  function rankFor(m){ const c=Number(m?.comboios||0); if(isAdmin(m?.email)||m?.admin)return '👑 Líder'; if(c>=50)return '💎 Diamante'; if(c>=20)return '🥇 Ouro'; if(c>=5)return '🥈 Prata'; return '🥉 Bronze'; }
+  function publicProfile(row){return {id:row.id,nome:row.nome||row.nick||'Motorista',nick:row.nick||row.nome||'Motorista',email:row.email,cidade:row.cidade||'',discord:row.discord||'',youtube:row.youtube||'',desde:row.desde||'',comboios:Number(row.comboios||0),prints:Number(row.prints||0),lives:Number(row.lives||0),avatar_url:row.avatar_url||'',admin:isAdmin(row.email),online:!!row.online,last_seen:row.last_seen};}
+  function setLocalSession(p){me=p; try{localStorage.setItem(SESSION,JSON.stringify(p||null));}catch(e){} }
+  function getLocalSession(){try{return JSON.parse(localStorage.getItem(SESSION)||'null')}catch(e){return null}}
+  function localMembers(){try{return JSON.parse(localStorage.getItem(DBKEY)||'[]')}catch(e){return []}}
+  function setLocalMembers(v){try{localStorage.setItem(DBKEY,JSON.stringify(v||[]));}catch(e){}}
+  function show(msg){ const n=$('#cadastroNotice'); if(n){n.classList.remove('hidden'); n.textContent=msg;} }
+  function enterSite(){ try{ if(typeof window.showSite==='function') window.showSite(); }catch(e){} ['siteHeader','home','comunidade','portalMain','siteFooter','floatingAtlas','installApp'].forEach(id=>$('#'+id)?.classList.remove('hidden')); $('#portal')?.classList.add('hidden'); location.hash='perfil'; }
+  async function upsertMyProfile(sessionUser, fields){ const c=getClient(); if(!c||!sessionUser) return null; const data={id:sessionUser.id,email:String(sessionUser.email||fields.email||'').toLowerCase(),nome:fields.nome||fields.nick||sessionUser.email,nick:fields.nick||fields.nome||sessionUser.email,cidade:fields.cidade||'',discord:fields.discord||'',youtube:fields.youtube||'',desde:fields.desde||new Date().toLocaleDateString('pt-BR'),updated_at:new Date().toISOString(),last_seen:new Date().toISOString(),online:true}; const {data:row,error}=await c.from('profiles').upsert(data,{onConflict:'id'}).select('*').single(); if(error){console.error(error); alert('Erro ao salvar perfil no banco: '+error.message); return null;} return publicProfile(row); }
+  async function loadAll(){ const c=getClient(); if(!c){ renderSupabaseNotice(); return; }
+    const {data:{session}}=await c.auth.getSession();
+    if(session?.user){ const {data:p}=await c.from('profiles').select('*').eq('id',session.user.id).maybeSingle(); if(p) setLocalSession(publicProfile(p)); }
+    const {data:ps,error:pe}=await c.from('profiles').select('id,email,nome,nick,cidade,discord,youtube,desde,comboios,prints,lives,avatar_url,online,last_seen').order('comboios',{ascending:false}); if(!pe&&ps){profiles=ps.map(publicProfile); setLocalMembers(profiles);} else console.warn(pe);
+    const {data:g}=await c.from('gallery_posts').select('id,user_id,nome,caption,image_url,created_at').order('created_at',{ascending:false}).limit(50); gallery=g||[];
+    if(me?.id){ const {data:f}=await c.from('friendships').select('*').or(`requester.eq.${me.id},addressee.eq.${me.id}`); friendships=f||[]; await c.from('profiles').update({online:true,last_seen:new Date().toISOString()}).eq('id',me.id); }
+    await loadSiteConfig(); renderReal(); }
+  async function loadSiteConfig(){ const c=getClient(); if(!c)return; const {data}=await c.from('site_settings').select('config').eq('id',1).maybeSingle(); if(data?.config){ localStorage.setItem(CFG,JSON.stringify(data.config)); try{ if(typeof window.applyCfg53==='function') window.applyCfg53(); }catch(e){} } }
+  async function saveSiteConfig(config){ const c=getClient(); if(!c) return false; const {error}=await c.from('site_settings').upsert({id:1,config,updated_at:new Date().toISOString()},{onConflict:'id'}); if(error){alert('Erro ao salvar configurações no banco: '+error.message); return false;} return true; }
+  function renderSupabaseNotice(){ const footer=$('#siteFooter small'); if(footer) footer.textContent='© 2026 Amigos da Estrada Connect — Criado e idealizado por Weslei Arlindo (É o Magnata).'; if(!ready()){ const box=$('#loginStatus'); if(box) box.innerHTML='⚠️ Falta configurar a Publishable Key/ANON KEY do Supabase nas variáveis do Vercel para os dados aparecerem para todos.'; } }
+  function renderRanking(){ const box=$('#rankCards'); if(!box)return; const list=(profiles.length?profiles:localMembers()).slice().sort((a,b)=>Number(b.comboios||0)-Number(a.comboios||0)); const cards=list.length?list.map((m,i)=>`<div class="downloadCard"><h3>${i+1}º ${m.avatar_url?`<img src="${m.avatar_url}" style="width:28px;height:28px;border-radius:50%;object-fit:cover;vertical-align:middle">`:''} ${m.nick||m.nome}</h3><p>${rankFor(m)} • ${m.online?'🟢 Online':'⚫ Offline'}</p><b>${Number(m.comboios||0)} comboios • ${Number(m.prints||0)} prints</b>${me&&m.id!==me.id?`<button class="primaryBtn aecAddFriend" data-id="${m.id}" type="button" style="margin-top:10px">Adicionar amigo</button>`:''}</div>`).join(''):'<div class="downloadCard"><h3>Nenhum motorista cadastrado</h3><p>Cadastre-se para aparecer no ranking.</p></div>'; box.innerHTML=cards; }
+  function ensureSocial(){ if($('#aecSocialReal'))return; const perfil=$('#perfil'); if(!perfil)return; perfil.insertAdjacentHTML('beforeend',`<div id="aecSocialReal" class="driverStats" style="margin-top:14px"><h3>👥 Amigos e Motoristas Online</h3><div id="aecFriendList" class="downloadGrid"></div></div>`); const comunidade=$('#comunidade')||$('#portalMain'); if(comunidade && !$('#aecGaleriaReal')) comunidade.insertAdjacentHTML('beforeend',`<section id="aecGaleriaReal"><h2 class="sectionTitle">🖼️ Galeria da Comunidade</h2><div class="formCard"><form id="aecGalleryForm" class="formGrid"><label class="full">Legenda do print/foto<input id="aecGalleryCaption" placeholder="Ex: Comboio Amigos da Estrada na estrada"></label><label class="full">Imagem/print<input id="aecGalleryFile" type="file" accept="image/*"></label><button class="primaryBtn full" type="submit">Publicar na Galeria</button></form></div><div id="aecGalleryList" class="downloadGrid" style="margin-top:14px"></div></section>`); }
+  function renderFriends(){ ensureSocial(); const box=$('#aecFriendList'); if(!box)return; if(!me){box.innerHTML='<div class="downloadCard"><h3>Entre na conta</h3><p>Faça login para adicionar amigos e ver quem está online.</p></div>';return;} const ids=new Set(); friendships.filter(f=>f.status==='accepted').forEach(f=>{if(f.requester===me.id)ids.add(f.addressee); if(f.addressee===me.id)ids.add(f.requester);}); const pending=friendships.filter(f=>f.status==='pending'&&f.addressee===me.id); const friends=profiles.filter(p=>ids.has(p.id)); box.innerHTML=[...pending.map(f=>{const p=profiles.find(x=>x.id===f.requester);return `<div class="downloadCard"><h3>Solicitação</h3><p>${p?.nick||p?.nome||'Motorista'} quer ser seu amigo.</p><button class="primaryBtn aecAcceptFriend" data-id="${f.id}" type="button">Aceitar</button></div>`}),...friends.map(p=>`<div class="downloadCard"><h3>${p.nick||p.nome}</h3><p>${p.online?'🟢 Online agora':'⚫ Offline'}</p><b>${rankFor(p)}</b></div>`)].join('') || '<div class="downloadCard"><h3>Lista de amigos</h3><p>Você ainda não adicionou amigos.</p></div>'; }
+  function renderGallery(){ ensureSocial(); const box=$('#aecGalleryList'); if(!box)return; box.innerHTML=(gallery||[]).map(g=>`<div class="downloadCard"><img src="${g.image_url}" style="width:100%;height:170px;object-fit:cover;border-radius:10px;margin-bottom:10px"><h3>${g.nome||'Motorista'}</h3><p>${g.caption||''}</p><b>${new Date(g.created_at).toLocaleString('pt-BR')}</b></div>`).join('') || '<div class="downloadCard"><h3>Nenhum print ainda</h3><p>Seja o primeiro a postar na galeria.</p></div>'; }
+  function renderPrivacy(){ const c=me||getLocalSession(); const wallet=$('#carteira'); if(wallet){ wallet.dataset.privado='true'; } if(c){ $('#cardNome') && ($('#cardNome').textContent=c.nick||c.nome); $('#cardPermissao') && ($('#cardPermissao').textContent='Privada do motorista'); $('#cardStatus') && ($('#cardStatus').textContent='Visível só para você'); } }
+  function renderReal(){ ensureSocial(); const c=me||getLocalSession(); const list=profiles.length?profiles:localMembers(); $('#membersCount') && ($('#membersCount').textContent=list.length); $('#cityCount') && ($('#cityCount').textContent=new Set(list.map(x=>x.cidade).filter(Boolean)).size); if(c){ $('#driverName') && ($('#driverName').textContent=c.nome||c.nick); $('#driverNick') && ($('#driverNick').textContent=c.nick||'---'); $('#driverCity') && ($('#driverCity').textContent=c.cidade||'---'); $('#driverDiscord') && ($('#driverDiscord').textContent=c.discord||'---'); $('#driverYoutube') && ($('#driverYoutube').textContent=c.youtube?'Canal informado':'---'); $('#driverRank') && ($('#driverRank').textContent=rankFor(c)); $('#driverStatus') && ($('#driverStatus').textContent=c.online?'Online':'Membro cadastrado'); $('#profileComboios') && ($('#profileComboios').textContent=Number(c.comboios||0)); $('#profilePrints') && ($('#profilePrints').textContent=Number(c.prints||0)); $('#profileLive') && ($('#profileLive').textContent=Number(c.lives||0)); $('#profileSince') && ($('#profileSince').textContent=c.desde||'---'); $('#profileLevel') && ($('#profileLevel').textContent=rankFor(c).replace(/^..\s?/,'')); $('#loggedWelcome') && ($('#loggedWelcome').textContent='Bem-vindo, '+(c.nick||c.nome)); }
+    const adminLink=$('a[href="#admin"]'); if(adminLink) adminLink.style.display=(c&&isAdmin(c.email))?'':'none'; const admin=$('#admin'); if(admin && c && !isAdmin(c.email)) admin.innerHTML='<h2 class="sectionTitle">⚙️ Admin</h2><div class="formCard"><h3>Painel privado</h3><p>Este painel é exclusivo do criador Weslei Arlindo (É o Magnata).</p></div>'; renderRanking(); renderFriends(); renderGallery(); renderPrivacy(); renderSupabaseNotice(); }
+  async function handleRegister(ev){ ev.preventDefault(); ev.stopPropagation(); ev.stopImmediatePropagation?.(); const form=ev.currentTarget; const fd=new FormData(form); const nome=(fd.get('nome')||$('#localNome')?.value||'').toString().trim(); const nick=(fd.get('nick')||$('#localNick')?.value||nome).toString().trim(); const email=(fd.get('email')||$('#localEmail')?.value||'').toString().trim().toLowerCase(); const senha=(fd.get('senha')||$('#localSenha')?.value||'').toString(); const cidade=(fd.get('cidade')||$('#localCidade')?.value||'').toString(); const discord=(fd.get('discord')||$('#localDiscord')?.value||'').toString(); const youtube=(fd.get('youtube')||$('#localYoutube')?.value||'').toString(); if(!nome||!email||!senha){alert('Preencha nome, e-mail e senha.');return false;} const c=getClient(); if(!c){alert('Configure o Supabase para cadastro real.');return false;} let {data,error}=await c.auth.signUp({email,password:senha,options:{data:{nome,nick,cidade,discord,youtube}}}); if(error && /already|registered|exists/i.test(error.message)){ data=await c.auth.signInWithPassword({email,password:senha}); error=data.error; }
+    if(error){alert('Erro no cadastro/login: '+error.message);return false;} const user=data.user||data.data?.user; const session=data.session||data.data?.session; const u=user||session?.user; if(!u){alert('Cadastro criado. Se o Supabase pedir confirmação por e-mail, confirme e depois faça login.');return false;} const p=await upsertMyProfile(u,{nome,nick,email,cidade,discord,youtube}); if(p){setLocalSession(p); await loadAll(); enterSite(); show('Cadastro real salvo no banco.');} return false; }
+  async function handleLogin(ev){ ev.preventDefault(); ev.stopPropagation(); ev.stopImmediatePropagation?.(); const fd=new FormData(ev.currentTarget); const email=(fd.get('emailLogin')||$('#loginLocalEmail')?.value||'').toString().trim().toLowerCase(); const senha=(fd.get('senhaLogin')||$('#loginLocalSenha')?.value||'').toString(); const c=getClient(); if(!c){alert('Configure o Supabase para login real.');return false;} const {data,error}=await c.auth.signInWithPassword({email,password:senha}); if(error){alert('E-mail ou senha incorretos: '+error.message);return false;} let {data:p}=await c.from('profiles').select('*').eq('id',data.user.id).maybeSingle(); if(!p) p=await upsertMyProfile(data.user,{email,nome:email,nick:email}); else p=publicProfile(p); setLocalSession(p); await loadAll(); enterSite(); return false; }
+  async function logoutReal(ev){ ev?.preventDefault?.(); ev?.stopPropagation?.(); const c=getClient(); if(c&&me?.id) await c.from('profiles').update({online:false,last_seen:new Date().toISOString()}).eq('id',me.id); if(c) await c.auth.signOut(); localStorage.removeItem(SESSION); me=null; ['siteHeader','home','comunidade','portalMain','siteFooter','floatingAtlas'].forEach(id=>$('#'+id)?.classList.add('hidden')); $('#portal')?.classList.remove('hidden'); location.hash=''; }
+  function bindAuth(){ ['memberForm','localAtlasForm'].forEach(id=>{const el=$('#'+id); if(el){el.onsubmit=handleRegister; el.addEventListener('submit',handleRegister,true);}}); $('#localFinalizeBtn')?.addEventListener('click',e=>handleRegister(Object.assign(e,{currentTarget:$('#localAtlasForm')||$('#memberForm')})),true); ['loginForm','localLoginForm'].forEach(id=>{const el=$('#'+id); if(el){el.onsubmit=handleLogin; el.addEventListener('submit',handleLogin,true);}}); ['logoutBtn','loggedLogout'].forEach(id=>$('#'+id)?.addEventListener('click',logoutReal,true)); }
+  function collectCfg(){ try{ const old=JSON.parse(localStorage.getItem(CFG)||'{}'); $$('#adminArea53 input[data-type]').forEach(inp=>{ const type=inp.dataset.type, i=Number(inp.dataset.i||0), key=inp.dataset.k==='name'&&type==='gifts'?'title':inp.dataset.k; old[type]=old[type]||[]; old[type][i]=old[type][i]||{}; old[type][i][key]=inp.value; }); old.voice=$('#voiceMode53')?.value||old.voice; old.phrase=$('#atlasPhrase53')?.value||old.phrase; return old; }catch(e){return {};}}
+  function bindAdminSave(){ const btn=$('#saveAllAdmin53'); if(btn){ btn.onclick=async function(ev){ev.preventDefault();ev.stopPropagation();ev.stopImmediatePropagation?.(); const c=me||getLocalSession(); if(!c||!isAdmin(c.email)){alert('Painel ADM exclusivo do Magnata.');return false;} const config=collectCfg(); localStorage.setItem(CFG,JSON.stringify(config)); const ok=await saveSiteConfig(config); try{ if(typeof window.applyCfg53==='function') window.applyCfg53(); }catch(e){} $('#adminArea53')?.classList.add('hidden'); alert(ok?'Alterações salvas no banco e aparecerão para todos.':'Alterações salvas só localmente. Configure/verifique o Supabase.'); return false; }; } }
+  async function addFriend(id){ if(!me){alert('Entre na sua conta para adicionar amigos.');return;} const c=getClient(); if(!c)return; if(id===me.id)return; const {error}=await c.from('friendships').insert({requester:me.id,addressee:id,status:'pending'}); if(error && !/duplicate/i.test(error.message)) alert('Erro ao enviar solicitação: '+error.message); await loadAll(); }
+  async function acceptFriend(id){ const c=getClient(); if(!c)return; await c.from('friendships').update({status:'accepted',updated_at:new Date().toISOString()}).eq('id',id); await loadAll(); }
+  async function publishGallery(ev){ ev.preventDefault(); if(!me){alert('Entre na conta para postar na galeria.');return;} const file=$('#aecGalleryFile')?.files?.[0]; if(!file){alert('Escolha uma imagem ou print.');return;} const c=getClient(); if(!c)return; const path=`${me.id}/${Date.now()}-${file.name.replace(/[^a-z0-9_.-]/gi,'_')}`; const up=await c.storage.from('gallery').upload(path,file,{upsert:false}); if(up.error){alert('Erro no upload: '+up.error.message);return;} const {data:url}=c.storage.from('gallery').getPublicUrl(path); const caption=$('#aecGalleryCaption')?.value||''; const {error}=await c.from('gallery_posts').insert({user_id:me.id,nome:me.nick||me.nome,caption,image_url:url.publicUrl}); if(error){alert('Erro ao publicar: '+error.message);return;} $('#aecGalleryCaption').value=''; $('#aecGalleryFile').value=''; await loadAll(); }
+  document.addEventListener('click',e=>{ const add=e.target.closest('.aecAddFriend'); if(add){e.preventDefault();addFriend(add.dataset.id);} const acc=e.target.closest('.aecAcceptFriend'); if(acc){e.preventDefault();acceptFriend(acc.dataset.id);} },true);
+  document.addEventListener('submit',e=>{ if(e.target?.id==='aecGalleryForm') publishGallery(e); },true);
+  document.addEventListener('DOMContentLoaded',()=>{ bindAuth(); bindAdminSave(); ensureSocial(); loadAll(); setInterval(loadAll,30000); });
+  setTimeout(()=>{bindAuth(); bindAdminSave(); ensureSocial(); loadAll();},1000);
+})();
+</script>
+
+
+
+<script>
+// BUILD FINAL v5.6.2 — Correção real: contadores Supabase + fundos Home/Carregamento salvos no banco/storage
+(function(){
+  const ADMIN_EMAILS=['wesleiarlindo26@gmail.com','wesleiarlindo34@gmail.com'];
+  const CFG='aec_config_v53_launch';
+  const $=s=>document.querySelector(s);
+  const $$=s=>Array.from(document.querySelectorAll(s));
+  const ready=()=>window.supabase && !!window.AEC_SUPABASE_URL && !!window.AEC_SUPABASE_ANON_KEY && !String(window.AEC_SUPABASE_URL).includes('COLE_AQUI') && !String(window.AEC_SUPABASE_ANON_KEY).includes('COLE_AQUI');
+  let client=null;
+  function sb(){ if(!client && ready()) client=window.supabase.createClient(window.AEC_SUPABASE_URL, window.AEC_SUPABASE_ANON_KEY); return client; }
+  function getCfg(){ try{return JSON.parse(localStorage.getItem(CFG)||'{}')}catch(e){return {}} }
+  function saveLocalCfg(c){ try{localStorage.setItem(CFG,JSON.stringify(c||{}))}catch(e){} }
+  function merge(a,b){ return Object.assign({},a||{},b||{}, {visual:Object.assign({},(a||{}).visual||{},(b||{}).visual||{})}); }
+  function setStatusLabels(isReal){
+    const badge=document.querySelector('.sectionTitle .lockBadge');
+    if(badge) badge.textContent=isReal?'🌐 dados reais no Supabase':'⚠️ configurar Supabase';
+    const membersTrend=document.querySelector('#membersCount')?.parentElement?.querySelector('.trend');
+    if(membersTrend) membersTrend.textContent=isReal?'Comunidade sincronizada para todos':'Falta URL/ANON KEY do Supabase';
+    const cityTrend=document.querySelector('#cityCount')?.parentElement?.querySelector('.trend');
+    if(cityTrend) cityTrend.textContent=isReal?'Cidades vindas do banco':'Aguardando banco real';
+  }
+  function applyVisualPublic(c){
+    c=c||getCfg(); const v=c.visual||{};
+    let st=document.getElementById('aecPublicVisualStyle');
+    if(!st){ st=document.createElement('style'); st.id='aecPublicVisualStyle'; document.head.appendChild(st); }
+    let css='';
+    if(v.bootBg){ css += `.bootScreen{background-image:linear-gradient(rgba(1,7,18,.58),rgba(1,7,18,.82)),url("${v.bootBg}")!important;background-size:cover!important;background-position:center!important;}\n`; }
+    if(v.homeBg){ css += `.hero:before{background:linear-gradient(90deg,rgba(2,8,20,.28),rgba(1,9,24,.78)),url("${v.homeBg}") center/cover no-repeat!important;opacity:.48!important;}\n`; }
+    if(v.atlasBg){ css += `.atlasArt{background-image:url("${v.atlasBg}")!important;background-size:cover!important;background-position:center!important;}\n`; }
+    st.textContent=css;
+    if(v.logo){ $$('img[src="assets/logo.png"],.brand img,.heroLogo img,.bootLogo,.footLogo img').forEach(img=>img.src=v.logo); }
+    let vid=$('#bootVideoBg');
+    if(v.bootVideo){
+      if(!vid){ vid=document.createElement('video'); vid.id='bootVideoBg'; vid.className='bootVideoBg'; vid.autoplay=true; vid.muted=true; vid.loop=true; vid.playsInline=true; $('#bootScreen')?.prepend(vid); }
+      if(vid.src!==v.bootVideo) vid.src=v.bootVideo;
+      vid.play().catch(()=>{});
+    } else if(vid){ vid.remove(); }
+  }
+  async function loadRealCounts(){
+    if(!ready()){ setStatusLabels(false); applyVisualPublic(getCfg()); return; }
+    const c=sb(); setStatusLabels(true);
+    try{
+      const {count,error}=await c.from('profiles').select('id',{count:'exact',head:true});
+      if(!error && typeof count==='number' && $('#membersCount')) $('#membersCount').textContent=count;
+      const {data:cityRows}=await c.from('profiles').select('cidade');
+      if(cityRows && $('#cityCount')) $('#cityCount').textContent=new Set(cityRows.map(r=>r.cidade).filter(Boolean)).size;
+    }catch(e){ console.warn('Contadores reais:',e); }
+  }
+  async function loadPublicConfig(){
+    if(!ready()){ applyVisualPublic(getCfg()); return; }
+    const c=sb();
+    try{
+      const {data,error}=await c.from('site_settings').select('config').eq('id',1).maybeSingle();
+      if(!error && data && data.config){ const merged=merge(getCfg(),data.config); saveLocalCfg(merged); applyVisualPublic(merged); try{ if(typeof window.applyCfg53==='function') window.applyCfg53(); }catch(e){} }
+    }catch(e){ console.warn('Config pública:',e); }
+  }
+  async function savePublicConfig(cnf){
+    if(!ready()) return {ok:false,msg:'Supabase não configurado.'};
+    const c=sb();
+    const {data:{user}}=await c.auth.getUser();
+    if(!user || !ADMIN_EMAILS.includes(String(user.email||'').toLowerCase())) return {ok:false,msg:'Só o Magnata pode salvar fundos públicos.'};
+    const {error}=await c.from('site_settings').upsert({id:1,config:cnf,updated_at:new Date().toISOString()},{onConflict:'id'});
+    if(error) return {ok:false,msg:error.message};
+    return {ok:true};
+  }
+  async function uploadSiteAsset(file,key){
+    const c=sb();
+    const safe=file.name.replace(/[^a-z0-9_.-]/gi,'_');
+    const path=`visual/${key}-${Date.now()}-${safe}`;
+    const up=await c.storage.from('site-assets').upload(path,file,{upsert:true,contentType:file.type||undefined});
+    if(up.error) throw up.error;
+    const {data}=c.storage.from('site-assets').getPublicUrl(path);
+    return data.publicUrl;
+  }
+  function replaceInput(id,key,acceptVideo){
+    const old=$('#'+id); if(!old || old.dataset.realV562) return;
+    const clone=old.cloneNode(true); clone.dataset.realV562='1'; old.parentNode.replaceChild(clone,old);
+    clone.addEventListener('change',async function(ev){
+      ev.preventDefault(); ev.stopPropagation(); ev.stopImmediatePropagation?.();
+      const file=clone.files&&clone.files[0]; if(!file) return;
+      if(!ready()){ alert('Configure a Publishable Key/ANON KEY do Supabase no Vercel para esse fundo aparecer para todos.'); return; }
+      try{
+        const url=await uploadSiteAsset(file,key);
+        const cnf=getCfg(); cnf.visual=cnf.visual||{};
+        if(key==='bootBg' && acceptVideo && file.type.startsWith('video/')){ cnf.visual.bootVideo=url; delete cnf.visual.bootBg; }
+        else { cnf.visual[key]=url; if(key==='bootBg') delete cnf.visual.bootVideo; }
+        saveLocalCfg(cnf); applyVisualPublic(cnf);
+        const res=await savePublicConfig(cnf);
+        alert(res.ok?'Arquivo salvo no Supabase. Agora aparece para todos os usuários.':'Arquivo aplicado localmente, mas não salvou público: '+res.msg);
+      }catch(err){ alert('Erro ao salvar arquivo no Storage. Confira se existe o bucket público site-assets no Supabase. Detalhe: '+(err.message||err)); }
+    },true);
+  }
+  function bindRealVisualInputs(){
+    replaceInput('bgBootFile','bootBg',true);
+    replaceInput('bgHomeFile','homeBg',false);
+    replaceInput('bgAtlasFile','atlasBg',false);
+    replaceInput('logoFile','logo',false);
+  }
+  function init(){ setStatusLabels(ready()); bindRealVisualInputs(); loadPublicConfig(); loadRealCounts(); }
+  document.addEventListener('DOMContentLoaded',init);
+  setTimeout(init,700); setTimeout(init,1800); setInterval(()=>{loadPublicConfig();loadRealCounts();},30000);
+})();
+</script>
+
+</body>
+</html>
